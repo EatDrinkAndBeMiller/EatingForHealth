@@ -1,13 +1,10 @@
 <?php include('header.php')?>
-<?php require('../model/recipe.php') ?>
-<?php require('../model/database.php') ?>
 
-<form>
 <section id="list" class="list">
     <header class="list row list header">
     <form action="." method="post" id="list" class="list_header_select">
-    <input type="hidden" name="action" value="list_meal_category">
-    <select name="mealid" class="form-select" aria-label="Select Meal" required>
+    <input type="hidden" name="action" value="list_recipe_options">
+    <select name="meal" class="form-select" aria-label="select meal" required>
     <option selected>View All Recipes</option>
     <option value="1">Breakfast</option>
     <option value="2">Lunch</option>
@@ -46,21 +43,17 @@
   <label class="form-check-label" for="inlineCheckbox2">Nuts</label>
 </div>
 <button class="add-button bold" id="user">Search</button><br>
-    </form>
-    </header>
+</form>
+</header>
   
     <table id="publictable">
       <tr>
         <th>Name</th>
-        <th>Category</th>
       </tr>
-      <?php
-      $recipe = Recipe::get_all_recipes(); ?>
       <?php foreach ($recipe as $r) : ?>
       <tr>
         <td><?php echo $r['recipe_name']; ?></td>
-        <td><?php echo $r['category']; ?></td>
-        <form action="single_recipe.php?rid=<?php echo $r['recipe_id'] ?>" id="single_recipe" method="POST">
+        <form action="view/single_recipe.php?rid=<?php echo $r['recipe_id'] ?>" id="single_recipe" method="POST">
         <td><input type="submit" name="view" value="View"></td>
       </tr>
       </form>

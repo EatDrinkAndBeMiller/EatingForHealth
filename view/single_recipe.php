@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
+<?php require('../model/database.php'); ?>
 <?php require('../model/recipe.php'); ?>
-<?php require('../model/database.php') ?>
 
 <?php $id = filter_input(INPUT_GET, 'rid', FILTER_VALIDATE_INT);
 $ingredients = Recipe::get_ingredients($id);

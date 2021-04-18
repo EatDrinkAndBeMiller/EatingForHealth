@@ -17,10 +17,10 @@
   <div class="col-md-4 align-middle"><br><br>
     <h4><u>Resources on this site&colon;</u></h4>
       <ul>
-        <li><a href="diet.php">Details about the Diet</a></li>
-        <li><a href="substitutes.php">Substitutes</a></li>
-        <li><a href="recipes.php">Recipes</a></li>
-        <li><a href="weekplan.php">Weekly Planner</a></li>
+        <li><a href="index.php?action=diet">Details about the Diet</a></li>
+        <li><a href="index.php?action=substitutes">Substitutes (Member Content)</a></li>
+        <li><a href="index.php?action=list_recipe">Exclusive Recipes (Member Content)</a></li>
+        <li><a href="index.php?action=weekplan">Weekly Planner (Member Content)</a></li>
       </ul>
   </div>
 </div>
