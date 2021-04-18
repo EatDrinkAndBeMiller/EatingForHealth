@@ -6,11 +6,13 @@
 $ingredients = Recipe::get_ingredients($id);
 $recipe = Recipe::get_recipe($id);
 $img = Recipe::get_image($id);
+
 ?>
 
 <main>
 <h1 style="text-align: center;"><?php echo $recipe['recipe_name']; ?></h1>
 <?php echo '<img src="images/recipes/' . $img['recipe_image'] . '">' ?>
+<label>Prep Time (Minutes):</label><?php echo " ".$recipe['prep_time']." "; ?><label>Cook/Fridge Time (Minutes):</label><?php echo " ".$recipe['cook_time']." "; ?><label>Total Time (Minutes):</label><?php echo " ".$recipe['total_time']." "; ?>
 <div id="column1" style="float:left; width:23%; padding: 0 10px;">
 <h2 style="text-align: center;">Ingredients</h2>
 <ul>
@@ -20,8 +22,11 @@ $img = Recipe::get_image($id);
 </ul>
 </div>
 <div id="column2" style="float:left; width:auto; padding: 10 20px;">
-<h2 style="text-align: center;">Recipe Steps</h2>
-<?php echo $recipe['description']; ?>
+<h2 style="text-align: center;">Directions</h2>
+<ol>
+    <li><?php if($recipe['step_a'] != '') { echo $recipe['step_a']; } ?></li>
+    <li><?php if($recipe['step_b'] != '') { echo $recipe['step_b']; } ?></li>
+</ol>
 </div>
 </main><br><br><br>
 <?php include('footer.php'); ?>

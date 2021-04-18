@@ -36,7 +36,7 @@ class Recipe {
 
     public static function get_recipe($id) {
         $db = Database::getDB();
-        $query = 'SELECT recipe_name, description FROM `recipe` WHERE recipe_id = :id'; 
+        $query = 'SELECT * FROM `recipe` WHERE recipe_id = :id'; 
         $statement = $db->prepare($query);
         $statement->bindValue(':id', $id);
         $statement->execute();
@@ -137,19 +137,11 @@ class Recipe {
             break;
     } }
 
-    public static function get_all_recipes_by_a($avoid) {
-        switch($avoid) {
-            
-        }
-    }
-
     public static function get_all_selected_recipes($avoid, $meal) {
         if ($meal = 1 && in_array("gluten", $avoid)) {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 1';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -158,8 +150,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -168,8 +158,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -178,8 +166,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -188,8 +174,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 5';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -198,8 +182,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -208,8 +190,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 5 OR 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -218,8 +198,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id < 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -228,8 +206,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id < 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -238,8 +214,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id < 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -248,8 +222,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id > 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -258,8 +230,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id < 2 OR > 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -268,8 +238,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id <2 OR > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -278,8 +246,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -288,8 +254,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id > 1 OR < 5 OR 7';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -298,8 +262,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 1';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -308,8 +270,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -318,8 +278,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -328,8 +286,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -338,8 +294,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 5';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -348,8 +302,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -358,8 +310,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 5 OR 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -368,8 +318,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id < 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -378,8 +326,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id < 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -388,8 +334,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id < 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -398,8 +342,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id > 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -408,8 +350,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id < 2 OR > 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -418,8 +358,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id <2 OR > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -428,8 +366,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -438,8 +374,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id > 1 OR < 5 OR 7';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -448,8 +382,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 1';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -458,8 +390,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -468,8 +398,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -478,8 +406,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -488,8 +414,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 5';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -498,8 +422,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -508,8 +430,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 5 OR 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -518,8 +438,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id < 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -528,8 +446,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id < 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -538,8 +454,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id < 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -548,8 +462,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id > 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -558,8 +470,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id < 2 OR > 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -568,8 +478,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id <2 OR > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -578,8 +486,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -588,8 +494,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id > 1 OR < 5 OR 7';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -598,8 +502,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 1';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -608,8 +510,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -618,8 +518,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -628,8 +526,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -638,8 +534,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 5';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -648,8 +542,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -658,8 +550,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 5 OR 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -668,8 +558,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id < 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -678,8 +566,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id < 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -688,8 +574,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id < 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -698,8 +582,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id > 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -708,8 +590,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id < 2 OR > 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -718,8 +598,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id <2 OR > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -728,8 +606,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -738,8 +614,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id > 1 OR < 5 OR 7';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -748,8 +622,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 1';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -758,8 +630,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -768,8 +638,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -778,8 +646,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -788,8 +654,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 5';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -798,8 +662,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -808,8 +670,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 5 OR 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -818,8 +678,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id < 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -828,8 +686,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id < 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -838,8 +694,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id < 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -848,8 +702,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id > 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -858,8 +710,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id < 2 OR > 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -868,8 +718,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id <2 OR > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -878,8 +726,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -888,8 +734,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id > 1 OR < 5 OR 7';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -898,8 +742,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 1';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -908,8 +750,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -918,8 +758,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -928,8 +766,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -938,8 +774,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 5';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -948,8 +782,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -958,8 +790,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 5 OR 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -968,8 +798,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id < 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -978,8 +806,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id < 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -988,8 +814,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id < 2';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -998,8 +822,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id > 6';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -1008,8 +830,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id < 2 OR > 3';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -1018,8 +838,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id <2 OR > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -1028,8 +846,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id > 4';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
@@ -1038,8 +854,6 @@ class Recipe {
             $db = Database::getDB();
             $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id > 1 OR < 5 OR 7';
             $statement = $db->prepare($query);
-            $statement->bindValue(':category', $meal);
-            $statement->bindValue(':avoid', $avoid);
             $statement->execute();
             $recipe = $statement->fetch();
             $statement->closeCursor();
