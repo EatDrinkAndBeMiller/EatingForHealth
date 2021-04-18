@@ -42,8 +42,8 @@
             include('view/add_recipe.php');
             break;
         case "add_recipe_now":
-            Recipe::add_recipe($name, $desc, $cat, $cid, $aid, $prep, $cook, $total, $a, $b, $c, $d);
-            header("Location: .?action=list_recipe");
+            $result = Recipe::add_recipe($name, $desc, $cat, $cid, $aid, $prep, $cook, $total, $a, $b, $c, $d);
+            include('view/admin.php');
             break;
         case "add_image":
             include('view/add_image.php');
