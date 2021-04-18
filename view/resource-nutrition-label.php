@@ -64,10 +64,10 @@
 
     <li><h5>Avoid &quot;Natural Flavors&quot;</h5>
         <p>&quot;Natural flavors&quot; are popular because they can make processed foods taste much closer to the natural product. However, 
-            natural flavors are manufactured in a lab and contain plant and/or animal material. Manufacturers are not required to disclose
+            natural flavors are manufactured in a lab and only CONTAIN plant and/or animal material. Manufacturers are not required to disclose
             exactly what materials.</p>
 
-        <p>In reality, natural flavors are much different than artificial flavors and can have negative health effects. It&rsquo;s best to avoid
+        <p>In reality, natural flavors are not much different than artificial flavors and can have negative health effects. It&rsquo;s best to avoid
             them on this diet. To read more, check out&colon; <a href="https://www.healthline.com/nutrition/natural-flavors" target="_blank">
             Natural Flavors&colon; Should You Eat Them?</a></p>
     </li>

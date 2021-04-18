@@ -49,25 +49,37 @@
   
   <br>
 <div class="container text-center">    
-  <h3>What We Do</h3><br>
+  <h3>Recommended Recipes</h3><br>
   <div class="row">
-    <div class="col-sm-4">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Current Project</p>
-    </div>
-    <div class="col-sm-4"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Project 2</p>    
-    </div>
-    <div class="col-sm-4">
-      <div class="well">
-       <p>Some text..</p>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-5">
+          <img src="images/recipes/cabbagesoup.jpg" style="width:100%" alt="cabbage soup">
+        </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <h5 class="card-title">Cabbage Soup</h5>
+            <p class="card-text">Free of dairy, gluten, eggs, sugar, nuts, coconut, oats and shellfish</p>
+          </div>
+        </div>
       </div>
-      <div class="well">
-       <p>Some text..</p>
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-5">
+          <img src="images/recipes/cabbagesoup.jpg" style="width:100%" alt="cabbage soup">
+        </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <h5 class="card-title">Cabbage Soup</h5>
+            <p class="card-text">Free of dairy, gluten, eggs, sugar, nuts, coconut, oats and shellfish</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div><br>
+</div>
+
+ <br>
 
 <?php include('footer.php') ?>
