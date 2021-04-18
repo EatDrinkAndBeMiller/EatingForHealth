@@ -481,4 +481,24 @@ class Recipe {
             $statement->closeCursor();
             return $recipe;
         }
-} }
+}
+    public static function add_recipe($name, $desc, $cat, $cid, $aid, $prep, $cook, $total, $a, $b, $c, $d) {
+            $db = Database::getDB();
+            $query = 'INSERT INTO `recipe` (recipe_name, description, category, category_id, prep_time, cook_time, total_time, allergen_id, step_a, step_b, step_c, step_d)
+            VALUES (:recipe_name, :description, :category, :category_id, :prep, :cook, :total, :allergen_id, :step_a, :step_b, :step_c, :step_d)';
+            $statement = $db->prepare($query);
+            $statement->bindValue(':recipe_name', $name, PDO::PARAM_STR);
+            $statement->bindValue(':description', $desc, PDO::PARAM_STR);
+            $statement->bindValue(':category', $cat, PDO::PARAM_STR);
+            $statement->bindValue(':category_id', $cid, PDO::PARAM_INT);
+            $statement->bindValue(':allergen_id', $aid, PDO::PARAM_INT);
+            $statement->bindValue(':prep', $prep, PDO::PARAM_INT);
+            $statement->bindValue(':cook', $cook, PDO::PARAM_INT);
+            $statement->bindValue(':total', $total, PDO::PARAM_INT);
+            $statement->bindValue(':step_a', $a, PDO::PARAM_STR);
+            $statement->bindValue(':step_b', $b, PDO::PARAM_STR);
+            $statement->bindValue(':step_c', $c, PDO::PARAM_STR);
+            $statement->bindValue(':step_d', $d, PDO::PARAM_STR);
+            $statement->execute();
+            $statement->closeCursor();
+    }}
