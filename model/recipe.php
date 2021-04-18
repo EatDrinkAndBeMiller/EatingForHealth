@@ -138,724 +138,346 @@ class Recipe {
     } }
 
     public static function get_all_selected_recipes($avoid, $meal) {
-        if ($meal = 1 && in_array("gluten", $avoid)) {
+        if (in_array("gluten", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 1';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("eggs", $avoid)) {
+        } elseif (in_array("eggs", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 2';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 2';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("dairy", $avoid)) {
+        } elseif (in_array("dairy", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 3';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 3';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("sugar", $avoid)) {
+        } elseif (in_array("sugar", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 4';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 4';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("nuts", $avoid)) {
+        } elseif (in_array("nuts", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 5';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 5';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("shellfish", $avoid)) {
+        } elseif (in_array("shellfish", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 6';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("shellfish", $avoid) && in_array("nuts", $avoid)) {
+        } elseif (in_array("eggs", $avoid) && in_array("gluten", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id != 5 OR 6';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id > 2';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid)) {
+        } elseif (in_array("eggs", $avoid) && in_array("gluten", $avoid) && in_array("dairy", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id < 4';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id > 3';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif  ($meal = 1 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid)) {
+        } elseif (in_array("eggs", $avoid) && in_array("gluten", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id < 3';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id > 4';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid)) {
+        } elseif (in_array("eggs", $avoid) && in_array("gluten", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid) && in_array("nuts", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id < 2';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id > 5';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid) && in_array("gluten", $avoid)) {
+        } elseif (in_array("eggs", $avoid) && in_array("gluten", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid) && in_array("nuts", $avoid) && in_array("shellfish", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id > 6';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id > 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("eggs", $avoid) && in_array("dairy", $avoid)) {
+        } elseif (in_array("gluten", $avoid) && in_array("dairy", $avoid) ) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id < 2 OR > 3';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 3 AND > 1';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid)) {
+        } elseif (in_array("gluten", $avoid) && in_array("sugar", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id <2 OR > 4';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 4 AND > 1';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) ) {
+        } elseif (in_array("gluten", $avoid) && in_array("nuts", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id > 4';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 5 AND > 1';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 1 && in_array("gluten", $avoid) && in_array("nuts", $avoid) && in_array("shellfish", $avoid)) {
+        } elseif (in_array("gluten", $avoid) && in_array("shellfish", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 1 AND allergen_id > 1 OR < 5 OR 7';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 6 AND > 1';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("gluten", $avoid)) {
+        } elseif (in_array("eggs", $avoid) && in_array("dairy", $avoid) ) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 1';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 2 OR 3';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("eggs", $avoid)) {
+        } elseif (in_array("eggs", $avoid) && in_array("sugar", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 2';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 2 OR 4';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("dairy", $avoid)) {
+        } elseif (in_array("eggs", $avoid) && in_array("nuts", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 3';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 5 OR 2';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("sugar", $avoid)) {
+        } elseif (in_array("eggs", $avoid) && in_array("shellfish", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 4';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 6 OR 2';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("nuts", $avoid)) {
+        } elseif (in_array("dairy", $avoid) && in_array("sugar", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 5';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 3 OR 4';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("shellfish", $avoid)) {
+        } elseif (in_array("dairy", $avoid) && in_array("nuts", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 6';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 3 OR 5';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("shellfish", $avoid) && in_array("nuts", $avoid)) {
+        } elseif (in_array("dairy", $avoid) && in_array("shellfish", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id != 5 OR 6';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 3 OR 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("shellfish", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id < 4';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 5 OR 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif  ($meal = 2 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("shellfish", $avoid) && in_array("sugar", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id < 3';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 4 OR 5 OR 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid)) {
+        } elseif (in_array("dairy", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id < 2';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 3 OR 4 OR 5';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid) && in_array("gluten", $avoid)) {
+        } elseif (in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id > 6';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 2 OR 3 OR 4';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("eggs", $avoid) && in_array("dairy", $avoid)) {
+        } elseif (in_array("gluten", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id < 2 OR > 3';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 3 OR 4';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("gluten", $avoid) && in_array("sugar", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id <2 OR > 4';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 4 OR 5';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) ) {
+        } elseif (in_array("nuts", $avoid) && in_array("shellfish", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) ) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id > 4';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 4 OR 5 OR 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 2 && in_array("gluten", $avoid) && in_array("nuts", $avoid) && in_array("shellfish", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("gluten", $avoid) && in_array("sugar", $avoid) && in_array("eggs", $avoid) ) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 2 AND allergen_id > 1 OR < 5 OR 7';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 2 OR 4 OR 5';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 3 && in_array("gluten", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("shellfish", $avoid) && in_array("dairy", $avoid) && in_array("gluten", $avoid) ) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 1';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 3 OR 5 OR 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 3 && in_array("eggs", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("eggs", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) && in_array("dairy", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 2';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 2 OR 3 OR 4 OR 5';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 3 && in_array("dairy", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("eggs", $avoid) && in_array("sugar", $avoid) && in_array("shellfish", $avoid) && in_array("dairy", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 3';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 2 OR 3 OR 4 OR 5 OR 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 3 && in_array("sugar", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("shellfish", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) && in_array("dairy", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 4';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 3 OR 4 OR 5 OR 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 3 && in_array("nuts", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("eggs", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) && in_array("shellfish", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 5';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 2 OR 4 OR 5 OR 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 3 && in_array("shellfish", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("eggs", $avoid) && in_array("shellfish", $avoid) && in_array("gluten", $avoid) && in_array("dairy", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 6';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 2 OR 3 OR 5 OR 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 3 && in_array("shellfish", $avoid) && in_array("nuts", $avoid)) {
+        } elseif (in_array("nuts", $avoid) && in_array("eggs", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) && in_array("dairy", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id != 5 OR 6';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 2 OR 3 OR 4 OR 5';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
-        } elseif ($meal = 3 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid)) {
+        } elseif (in_array("shellfish", $avoid) && in_array("eggs", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) && in_array("dairy", $avoid)) {
             $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id < 4';
+            $query = 'SELECT * FROM `recipe` WHERE category_id = :category_id AND allergen_id != 1 OR 2 OR 3 OR 4 OR 6';
             $statement = $db->prepare($query);
+            $statement->bindValue(':category_id', $meal, PDO::PARAM_INT);
             $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif  ($meal = 3 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id < 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 3 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id < 2';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 3 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid) && in_array("gluten", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id > 6';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 3 && in_array("eggs", $avoid) && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id < 2 OR > 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 3 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id <2 OR > 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 3 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) ) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id > 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 3 && in_array("gluten", $avoid) && in_array("nuts", $avoid) && in_array("shellfish", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 3 AND allergen_id > 1 OR < 5 OR 7';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("gluten", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 1';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("eggs", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 2';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("sugar", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("nuts", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 5';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("shellfish", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 6';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("shellfish", $avoid) && in_array("nuts", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id != 5 OR 6';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id < 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif  ($meal = 4 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id < 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id < 2';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid) && in_array("gluten", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id > 6';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("eggs", $avoid) && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id < 2 OR > 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id <2 OR > 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) ) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id > 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 4 && in_array("gluten", $avoid) && in_array("nuts", $avoid) && in_array("shellfish", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 4 AND allergen_id > 1 OR < 5 OR 7';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("gluten", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 1';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("eggs", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 2';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("sugar", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("nuts", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 5';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("shellfish", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 6';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("shellfish", $avoid) && in_array("nuts", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id != 5 OR 6';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id < 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif  ($meal = 5 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id < 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id < 2';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid) && in_array("gluten", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id > 6';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("eggs", $avoid) && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id < 2 OR > 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id <2 OR > 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) ) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id > 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 5 && in_array("gluten", $avoid) && in_array("nuts", $avoid) && in_array("shellfish", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 5 AND allergen_id > 1 OR < 5 OR 7';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("gluten", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 1';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("eggs", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 2';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("sugar", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("nuts", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 5';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("shellfish", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 6';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("shellfish", $avoid) && in_array("nuts", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id != 5 OR 6';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id < 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif  ($meal = 6 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id < 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id < 2';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("shellfish", $avoid) && in_array("nuts", $avoid) && in_array("sugar", $avoid) && in_array("dairy", $avoid) && in_array("eggs", $avoid) && in_array("gluten", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id > 6';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("eggs", $avoid) && in_array("dairy", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id < 2 OR > 3';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id <2 OR > 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("eggs", $avoid) && in_array("dairy", $avoid) && in_array("sugar", $avoid) && in_array("gluten", $avoid) ) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id > 4';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
-            $statement->closeCursor();
-            return $recipe;
-        } elseif ($meal = 6 && in_array("gluten", $avoid) && in_array("nuts", $avoid) && in_array("shellfish", $avoid)) {
-            $db = Database::getDB();
-            $query = 'SELECT * FROM `recipe` WHERE category_id = 6 AND allergen_id > 1 OR < 5 OR 7';
-            $statement = $db->prepare($query);
-            $statement->execute();
-            $recipe = $statement->fetch();
+            $recipe = $statement->fetchAll();
             $statement->closeCursor();
             return $recipe;
         }

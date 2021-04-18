@@ -45,10 +45,15 @@
     <table id="publictable">
       <tr>
         <th>Name</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Select</th>
       </tr>
       <?php foreach ($recipe as $r) : ?>
       <tr>
-        <td><?php echo $r['recipe_name']; ?></td>
+        <td><?php echo (empty($r)) ? 'No Matching Recipes' : $r['recipe_name']; ?></td>
+        <td><?php echo (empty($r)) ? 'No Matching Recipes' : $r['description']; ?></td>
+        <td><?php echo (empty($r)) ? 'No Matching Recipes' : $r['category']; ?></td>
         <form action="view/single_recipe.php?rid=<?php echo $r['recipe_id'] ?>" id="single_recipe" method="POST">
         <td><input type="submit" name="view" value="View"></td>
       </tr>
