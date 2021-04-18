@@ -43,7 +43,7 @@
             break;
         case "add_recipe_now":
             $result = Recipe::add_recipe($name, $desc, $cat, $cid, $aid, $prep, $cook, $total, $a, $b, $c, $d);
-            include('view/admin.php');
+            header("Location: .?action=list_recipe");
             break;
         case "add_image":
             include('view/add_image.php');
