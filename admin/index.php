@@ -16,6 +16,10 @@
     $prep = filter_input(INPUT_POST, 'prep', FILTER_VALIDATE_INT);
     $cook = filter_input(INPUT_POST, 'cook', FILTER_VALIDATE_INT);
     $total = filter_input(INPUT_POST, 'total', FILTER_VALIDATE_INT);
+    $ing = filter_input(INPUT_POST, 'iname', FILTER_SANITIZE_STRING);
+    $img = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
+    $rid = filter_input(INPUT_POST, 'rid', FILTER_VALIDATE_INT);
+    
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
         $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
         if (!$action) {
@@ -41,8 +45,8 @@
         case "add_recipe":
             include('view/add_recipe.php');
             break;
-        case "add_recipe_now":
-            $result = Recipe::add_recipe($name, $desc, $cat, $cid, $aid, $prep, $cook, $total, $a, $b, $c, $d);
+        case "add":
+            Recipe::add_recipe($name, $desc, $cat, $cid, $aid, $prep, $cook, $total, $a, $b, $c, $d);
             header("Location: .?action=list_recipe");
             break;
         case "add_image":
@@ -52,10 +56,20 @@
             include('view/add_relationship.php');
             break;
         case "add_ingredient":
+            $ingredients = Recipe::get_all_ingredients();
             include('view/add_ingredient.php');
             break;
+        case "addi":
+            Recipe::add_ingredient($ing);
+            header("Location: .?action=list_recipe");
+            break;
         case "add_image":
+            $pics = Recipe::get_all_recipe_images();
             include('view/add_image.php');
+            break;
+        case "addpic":
+            Recipe::add_recipe_img($img, $rid);
+            header("Location: .?action=list_recipe");
             break;
         case "add_relationship":
             include('view/add_relationship.php');

@@ -483,22 +483,58 @@ class Recipe {
         }
 }
     public static function add_recipe($name, $desc, $cat, $cid, $aid, $prep, $cook, $total, $a, $b, $c, $d) {
-            $db = Database::getDB();
-            $query = 'INSERT INTO `recipe` (recipe_name, description, category, category_id, prep_time, cook_time, total_time, allergen_id, step_a, step_b, step_c, step_d)
-            VALUES (:recipe_name, :description, :category, :category_id, :prep, :cook, :total, :allergen_id, :step_a, :step_b, :step_c, :step_d)';
-            $statement = $db->prepare($query);
-            $statement->bindValue(':recipe_name', $name, PDO::PARAM_STR);
-            $statement->bindValue(':description', $desc, PDO::PARAM_STR);
-            $statement->bindValue(':category', $cat, PDO::PARAM_STR);
-            $statement->bindValue(':category_id', $cid, PDO::PARAM_INT);
-            $statement->bindValue(':allergen_id', $aid, PDO::PARAM_INT);
-            $statement->bindValue(':prep', $prep, PDO::PARAM_INT);
-            $statement->bindValue(':cook', $cook, PDO::PARAM_INT);
-            $statement->bindValue(':total', $total, PDO::PARAM_INT);
-            $statement->bindValue(':step_a', $a, PDO::PARAM_STR);
-            $statement->bindValue(':step_b', $b, PDO::PARAM_STR);
-            $statement->bindValue(':step_c', $c, PDO::PARAM_STR);
-            $statement->bindValue(':step_d', $d, PDO::PARAM_STR);
-            $statement->execute();
-            $statement->closeCursor();
-    }}
+        $db = Database::getDB();
+        $query = 'INSERT INTO `recipe` (recipe_name, description, category, category_id, prep_time, cook_time, total_time, allergen_id, step_a, step_b, step_c, step_d)
+        VALUES (:recipe_name, :description, :category, :category_id, :prep, :cook, :total, :allergen_id, :step_a, :step_b, :step_c, :step_d)';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':recipe_name', $name, PDO::PARAM_STR);
+        $statement->bindValue(':description', $desc, PDO::PARAM_STR);
+        $statement->bindValue(':category', $cat, PDO::PARAM_STR);
+        $statement->bindValue(':category_id', $cid, PDO::PARAM_INT);
+        $statement->bindValue(':allergen_id', $aid, PDO::PARAM_INT);
+        $statement->bindValue(':prep', $prep, PDO::PARAM_INT);
+        $statement->bindValue(':cook', $cook, PDO::PARAM_INT);
+        $statement->bindValue(':total', $total, PDO::PARAM_INT);
+        $statement->bindValue(':step_a', $a, PDO::PARAM_STR);
+        $statement->bindValue(':step_b', $b, PDO::PARAM_STR);
+        $statement->bindValue(':step_c', $c, PDO::PARAM_STR);
+        $statement->bindValue(':step_d', $d, PDO::PARAM_STR);
+        $statement->execute();
+        $statement->closeCursor();
+}
+    public static function get_all_ingredients() {
+        $db = Database::getDB();
+        $query = 'SELECT * FROM ingredients';
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $ingredients = $statement->fetchAll();
+        $statement->closeCursor();
+        return $ingredients;
+}
+    public static function add_ingredient($ing) {
+        $db = Database::getDB();
+        $query = 'INSERT INTO `ingredients` (ingredient_name) VALUES (:ingredient)';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':ingredient', $ing, PDO::PARAM_STR);
+        $statement->execute();
+        $statement->closeCursor();
+}
+    public static function get_all_recipe_images() {
+        $db = Database::getDB();
+        $query = 'SELECT * FROM recipe_images';
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $pics = $statement->fetchAll();
+        $statement->closeCursor();
+        return $pics;
+    }
+    public static function add_recipe_img($img, $rid) {
+        $db = Database::getDB();
+        $query = 'INSERT INTO `recipe_images` (recipe_image, recipe_id) VALUES (:img_name, :rid)';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':img_name', $img, PDO::PARAM_STR);
+        $statement->bindValue(':rid', $rid, PDO::PARAM_INT);
+        $statement->execute();
+        $statement->closeCursor();
+}
+}

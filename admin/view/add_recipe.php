@@ -2,8 +2,8 @@
 
 <section id="list" class="list">
     <header class="list row list header">
-    <form action="." method="post" id="list" class="list_header_select">
-    <input type="hidden" name="action" value="add_recipe_now">
+    <form action=".?action=add" method="post" id="list" class="list_header_select">
+    <input type="hidden" name="action" value="add">
     <select name="category" class="form-select" aria-label="Select Category" required>
     <option selected>Select Meal Category</option>
     <option value="Breakfast">Breakfast</option>
@@ -70,5 +70,6 @@
 </div>
 <button class="add-button bold" id="add">Add Recipe</button>
     </form>
+    </header>
 <a href="./index.php?action=list_recipe">Return to Admin Home</a>
 <?php include('footer.php'); ?>

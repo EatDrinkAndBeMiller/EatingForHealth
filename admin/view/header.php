@@ -47,7 +47,7 @@
                 <a class="nav-link" href="index.php?action=diet">The Diet</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=diet">The Diet</a>
+                <a class="nav-link" href="index.php?action=diet">Recipe Links</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
