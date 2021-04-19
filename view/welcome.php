@@ -1,44 +1,33 @@
 <?php include('header.php') ?>
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/welcome_carousel.png" class="d-block w-100" alt="welcome slide with link to The Diet">
-      <a href="diet.php"><div class="carousel-caption d-none d-md-block">
-          <!-- <h5>title</h5>
-          <p>Caption</p> -->
-        </div></a>
+<div class="container">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="30000">
+        <a href="diet.php"><img src="images/welcome_carousel.png" class="d-block w-100" alt="..."></a>
+      </div>
+      <div class="carousel-item" data-bs-interval="30000">
+        <a href="about-membership.php"><img src="images/membership_carousel.png" class="d-block w-100" alt="..."></a>
+      </div>
+      <div class="carousel-item" data-bs-interval="30000">
+        <a href="https://www.newbeginningsfmc.com/about" target="_blank">
+          <img src="images/NBFM_carousel.png" class="d-block w-100" alt="..."></a>
+      </div>
     </div>
-    <div class="carousel-item">
-      <a href="resources.php">
-        <img src="images/video_carousel.png" class="d-block w-100" alt="screenshot of tutorial video with link">
-          <!-- <div class="carousel-caption d-none d-md-block">
-            <h5>title</h5>
-            <p>Caption</p>
-          </div> --></a>
-    </div>
-    <div class="carousel-item">
-    <a href="resources.php">
-        <img src="images/membership_carousel.png" class="d-block w-100" alt="slide about membership and link to sign up">
-          <!-- <div class="carousel-caption d-none d-md-block">
-            <h5>title</h5>
-            <p>Caption</p>
-          </div> --></a>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="##carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="##carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
 </div>
 
   <br>
