@@ -8,7 +8,7 @@
     <link rel="icon" href="images/icon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.cssg">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
