@@ -8,12 +8,11 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <a href="diet.php">
-        <img src="images/welcome_carousel.png" class="d-block w-100" alt="welcome slide with link to The Diet">
-          <div class="carousel-caption d-none d-md-block">
-            <!-- <h5>title</h5>
-            <p>Caption</p> -->
-          </div></a>
+      <img src="images/welcome_carousel.png" class="d-block w-100" alt="welcome slide with link to The Diet">
+      <a href="diet.php"><div class="carousel-caption d-none d-md-block">
+          <!-- <h5>title</h5>
+          <p>Caption</p> -->
+        </div></a>
     </div>
     <div class="carousel-item">
       <a href="resources.php">

@@ -18,9 +18,8 @@
     <h4><u>Resources on this site&colon;</u></h4>
       <ul>
         <li><a href="diet.php">Details about the Diet</a></li>
-        <li><a href="substitutes.php">Substitutes</a></li>
-        <li><a href="recipes.php">Recipes</a></li>
-        <li><a href="weekplan.php">Weekly Planner</a></li>
+        <li><a href="recipes-public.php">Recipe Links</a></li>
+        <li><a href="about-membership.php">Learn about becoming a member</a></li>
       </ul>
   </div>
 </div>

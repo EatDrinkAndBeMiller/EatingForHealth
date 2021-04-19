@@ -39,10 +39,9 @@
   <div class="col-md-5 align-middle"><br>
     <p><u>For support, use the resources on this site&colon;</u></p>
       <ul>
-        <li><a href="substitutes.php">Substitutes</a></li>
-        <li><a href="recipes.php">Recipes</a></li>
-        <li><a href="weekplan.php">Weekly Planner</a></li>
+        <li><a href="recipes-public.php">Recipe Links</a></li>
         <li><a href="resources.php">Resources</a></li>
+        <li><a href="about-membership.php">Learn about becoming a member</a></li>
       </ul>
     <br>
     <p><a href="resource_files/Anti-inflammatoryEliminationDiet.pdf" target="_blank">Download Phase 1 List</a> &#40;PDF&#41;</p>
