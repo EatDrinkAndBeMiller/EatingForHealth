@@ -9,14 +9,14 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="30000">
-        <a href="diet.php"><img src="images/welcome_carousel.png" class="d-block w-100" alt="..."></a>
+        <a href="diet.php"><img src="images/welcome_carousel.png" class="d-block w-100" alt="slide to welcome users with link to the diet"></a>
       </div>
       <div class="carousel-item" data-bs-interval="30000">
-        <a href="about-membership.php"><img src="images/membership_carousel.png" class="d-block w-100" alt="..."></a>
+        <a href="about-membership.php"><img src="images/membership_carousel.png" class="d-block w-100" alt="slide about benefits of membership with link to About Membership"></a>
       </div>
       <div class="carousel-item" data-bs-interval="30000">
         <a href="https://www.newbeginningsfmc.com/about" target="_blank">
-          <img src="images/NBFM_carousel.png" class="d-block w-100" alt="..."></a>
+          <img src="images/NBFM_carousel.png" class="d-block w-100" alt="slide with link to New Beginnings Functional Medicine website"></a>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -27,13 +27,43 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+  </div>
 </div>
+<hr>
+
+<div class="row">
+  <div class="col-lg-6">
+    <h3 class="logo-font text-center" style="font-family: 'Kaushan Script', cursive;"><u>Eating4Health</u></h3>
+    <p>This website is specifically designed to support those following Dr. Shannon&rsquo;s anti-inflammatory&#47;
+        elimination diet. Here are some public resources for support&colon;</p>
+    <ul>
+      <li><a href="diet.php">The Diet</a> - details about what to eat and what not to eat</li>
+      <li><a href="recipes-public.php">Recipe Links</a> - links to recipes that fit either phases of the diet</li>
+      <li><a href="resources.php">Resources</a> - additional resources to support healthy living</li>
+    </ul>
+    <p>To learn more about Dr. Shannon and New Beginnings Functional medicine, check out <a href="https://www.newbeginningsfmc.com/" target="_blank">
+        www.newbeginningsfmc.com</a>. Learn more about a free 15 minute consultation about your health concerns and needs.</p>
+  </div>
+  <div class="col-lg-6">
+    <a href="about-membership.php">
+    <img src="images/tile_membership.png" alt="information about becoming a member, click here" width="100%"></a>
+  </div>
+</div>
+<hr>
+<div class="row justify-content-md-center">
+  <div class="col-lg-8">
+    <img src="images/site-tour_open-slide.png" alt="placeholder for site tour video" width="100%">
+    <!-- iframe for tutorial video:
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+    </div> -->
+  </div>
 </div>
 
-  <br>
+<hr><br>
 <div class="container text-center">    
-  <h3>Spring &amp; Summer Recipes</h3><br>
-  <div class="row">
+  <h3 style="font-family: 'Kaushan Script', cursive;"><u>Spring &amp; Summer Recipes</u></h3><br>
+  <div class="row justify-content-md-center ">
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row g-0">
         <div class="col-md-4">
@@ -68,7 +98,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row justify-content-md-center ">
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row g-0">
         <div class="col-md-4">

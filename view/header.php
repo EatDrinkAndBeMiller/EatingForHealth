@@ -5,12 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="icon" href="images/logo.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+    </style>
 
     <style>
     table, th, td {
@@ -38,6 +40,10 @@
       </div>
 
     <nav class="navbar topnav">
+      <!--Bootstrap hamburger menu--needs to be on left-->
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
       <ul class="nav nav-pills">
         <li class="nav-item">
           <a class="nav-link" href="welcome.php">Home</a>
