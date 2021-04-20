@@ -10,9 +10,9 @@
     <a href="mailto:DrShannon@NewBeginningsFMC.com">DrShannon@NewBeginningsFMC.com</a>
     </div>
     <div class="col order-5">
-    Website created by:
+    Website created by: <br>
     <img src="images/4studentslogo.png" class="text-end" alt="4 Students & a Website" style="width:100px;"> <br>
-    <a href="https://ehmiller27.wixsite.com/elizabethmiller">Elizabeth Miller</a> <br>
+    <a href="https://ehmiller27.wixsite.com/elizabethmiller" target="_blank">Elizabeth Miller</a> <br>
     Mark Ross <br>
     Tyler Follett <br>
     Kaylee Hill <br>
@@ -20,7 +20,10 @@
     <div class="col order-1">
     <a href="welcome.php">Home</a> <br>
     <a href="diet.php">The Diet</a> <br>
-    <a href="resources.php">Resources</a>
+    <a href="resources.php">Resources</a> <br><br>
+    <a href="https://cdn.websites.hibu.com/03b83eb1b4364a429b55b70c5552403c/files/uploaded/New%20Beginnings%20Functional%20Disclaimer.pdf" target="_blank">Disclaimer</a> <br>
+    <a href="https://cdn.websites.hibu.com/03b83eb1b4364a429b55b70c5552403c/files/uploaded/New%20Beginnings%20Functional%20Privacy%20Policy.pdf" target="_blank">Privacy Policy</a> <br>
+    <a href="https://cdn.websites.hibu.com/03b83eb1b4364a429b55b70c5552403c/files/uploaded/New%20Beginnings%20Functional%20Terms%20and%20Conditions.pdf" target="_blank">Terms & Conditions</a>
     </div>
   </div>
 </div>
