@@ -15,7 +15,7 @@
     <a href="https://ehmiller27.wixsite.com/elizabethmiller" target="_blank">Elizabeth Miller</a> <br>
     Mark Ross <br>
     Tyler Follett <br>
-    Kaylee Hill <br>
+    <a href="http://linkedin.com/in/kaylee-hill-85750714b" target="_blank">Kaylee Hill <br>
     </div>
     <div class="col order-1">
     <a href="welcome.php">Home</a> <br>
