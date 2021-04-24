@@ -1,33 +1,32 @@
 <?php include('header.php') ?>
 
 <h1 class="text-center">Recipe Links</h1><br>
-
 <div class="row">
-  <div class="col-md-6 text center">
-    <h5><u>Categories</u></h5>
+    <div class="col-md-6">
+        <h1 class="text-center dark-text" style="font-family: 'Kaushan Script', cursive;">
+            <u>Categories</u></h1><br>
+      <div class="row">
+        <div class="col-md-6">
+            <a href="#breakfast" class="h4">Breakfast</a><br>
+            <a href="#snacks-sides" class="h4">Snacks &amp; Sides</a><br>
+            <a href="#entrees" class="h4">Entrees</a>
+        </div>
+        <div class="col-4 col-sm-6">
+            <a href="#desserts" class="h4">Desserts</a><br>
+            <a href="#smoothies" class="h4">Smoothies</a><br>
+            <a href="#sauces-seasonings" class="h4">Sauces &amp; Seasonings</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 text-center">
+    <a href="about-membership.php"><img src="images/membership_recipes.png" alt="graphic for considering membership for additional recipes and searching"
+        width="100%">></a>
+    </div>
   </div>
-  <div class="col-md-6"></div>
-</div>
-<div class="row">
-  <div class="col-md-3">
-    <a href="#breakfast">Breakfast</a><br>
-    <a href="#snacks-sides">Snacks &amp; Sides</a><br>
-    <a href="#entrees">Entrees</a>
-  </div>
-  <div class="col-md-3">
-    <a href="#desserts">Desserts</a><br>
-    <a href="#smoothies">Smoothies</a><br>
-    <a href="#sauces-seasonings">Sauces &amp; Seasonings</a>
-  </div>
-  <div class="col-md-6 text-center">
-    <p>Want to search these recipes and more?</p>
-    <a href="about-membership.php"><h5>Consider Membership</h5></a>
-  </div>
-</div>
 <br>
 
 <div class="card bg-light">
-  <div class="card-body h3 text-center dark-text" id="breakfast">Breakfast</div>
+  <div class="card-body h2 text-center dark-text" id="breakfast" style="font-family: 'Kaushan Script', cursive;">Breakfast</div>
 </div>
 <div class="card-columns">
   <div class="card">
@@ -51,11 +50,21 @@
       <small class="text-muted">Photo&colon; Joyful Healthy Eats</small>
     </div>
   </div>
+  <div class="card">
+    <a href="https://detoxinista.com/wprm_print/29759" target="_blank">
+    <img class="card-img-top text-center" src="images/recipes/almond-pancakes.jpg" alt="photo of Almond Flour Pancakes">
+    <div class="card-body">
+      <h5 class="card-title">Almond Flour Pancakes</h5></a>
+      <p class="card-text"><b>Free of</b> gluten, dairy, sugar, oats, coconut, shellfish</p>
+      <p class="card-text"><b>Ingredients</b> include almond flour, eggs, maple syrup, olive oil, baking powder, vanilla extract, and almond milk</p>
+      <small class="text-muted">Photo&colon; Megan Gilmore | Detoxinista</small>
+    </div>
+  </div>
 </div>
 <br>
 
 <div class="card bg-light">
-  <div class="card-body h3 text-center dark-text" id="snacks-sides">Snacks &amp; Sides</div>
+  <div class="card-body h2 text-center dark-text" id="snacks-sides" style="font-family: 'Kaushan Script', cursive;">Snacks &amp; Sides</div>
 </div>
 <div class="card-columns">
   <div class="card">
@@ -82,7 +91,7 @@
 <br>
 
 <div class="card bg-light">
-  <div class="card-body h3 text-center dark-text" id="entrees">Entrees &#40;lunch &amp; dinner&#41;</div>
+  <div class="card-body h2 text-center dark-text" id="entrees" style="font-family: 'Kaushan Script', cursive;">Entrees &#40;lunch &amp; dinner&#41;</div>
 </div>
 <div class="card-columns">
   <div class="card">
@@ -275,7 +284,7 @@
 <br>
 
 <div class="card bg-light">
-  <div class="card-body h3 text-center dark-text" id="desserts">Desserts</div>
+  <div class="card-body h2 text-center dark-text" id="desserts" style="font-family: 'Kaushan Script', cursive;">Desserts</div>
 </div>
 <div class="card-columns">
   <div class="card">
@@ -347,7 +356,7 @@
 <br>
 
 <div class="card bg-light">
-  <div class="card-body h3 text-center dark-text" id="smoothies">Smoothies</div>
+  <div class="card-body h2 text-center dark-text" id="smoothies" style="font-family: 'Kaushan Script', cursive;">Smoothies</div>
 </div>
 <div class="card-columns">
   <div class="card">
@@ -365,7 +374,7 @@
 <br>
 
 <div class="card bg-light">
-  <div class="card-body h3 text-center dark-text" id="sauces-seasonings">Sauces &amp; Seasonings</div>
+  <div class="card-body h2 text-center dark-text" id="sauces-seasonings" style="font-family: 'Kaushan Script', cursive;">Sauces &amp; Seasonings</div>
 </div>
 <div class="card-columns">
   <div class="card">
