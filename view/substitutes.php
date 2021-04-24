@@ -1,7 +1,7 @@
 <?php include('header.php')?>
   
 <div class="container text-center">    
-  <h3>Please use wireframe in Google Drive folder</h3><br>
+  <h3>Substitute Information</h3><br>
 </div>
   <div class="container">
   <div class="row">
