@@ -13,9 +13,9 @@
     Website created by: <br>
     <img src="images/4studentslogo.png" class="text-end" alt="4 Students & a Website" style="width:100px;"> <br>
     <a href="https://ehmiller27.wixsite.com/elizabethmiller" target="_blank">Elizabeth Miller</a> <br>
-    Mark Ross <br>
-    Tyler Follett <br>
-    <a href="http://linkedin.com/in/kaylee-hill-85750714b" target="_blank">Kaylee Hill <br>
+    <a href="https://www.linkedin.com/in/mark-ross-5a0070156" target="_blank">Mark Ross <br>
+    <a href="https://www.linkedin.com/in/tyler-follett" target="_blank">Tyler Follett <br>
+    <a href="https://www.linkedin.com/in/kaylee-hill-85750714b" target="_blank">Kaylee Hill <br>
     </div>
     <div class="col order-1">
     <a href="welcome.php">Home</a> <br>
