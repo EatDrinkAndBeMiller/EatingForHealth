@@ -91,8 +91,25 @@
     </ul>
     </div>
   </div>
+</div>
+<br>
 
-  
-  <br>
+  <div class="container">
+  <div class="row">
+    <div class="col-2">
+    <img src="images/dairysub.jpg" class="text-end" alt="Gluten Replacements" style="width:150px;"> <br>
+    </div>
+    <div class="col-5">
+    <p class="text-left">Flour/Gluten Replacements</p>
+    <ul class="text-left">
+      <li>Canned Coconut Milk</li>
+      <li>Store-bought dairy-free cream cheese*</li>
+      <li>Store-bought dairy-free yogurt*</li>
+      <li>Store-bought dairy-free cheese*</li>
+      <li>*Read Ingredient Labels before purchasing</li>
+    </ul>
+    </div>
+</div>
+</div><br>
 
 <?php include('footer.php')?>
