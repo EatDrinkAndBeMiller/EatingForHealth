@@ -6,7 +6,7 @@
 <p>For 30 days, you will avoid the foods listed on your food sensitivity test AND the following foods&colon;</p>
 <div class="row">
   <div class="col">
-    <ul>
+  <ul class="text-left">
       <li>Dairy &#40;no milk, cheese, yogurt, ghee, butter, margarine, shortening, goat&rsquo;s milk&#41;</li>
       <li>Eggs</li>
       <li>Gluten &#40;no wheat, oats, rye, barley which are typically found in breads, pasta, cereals&#41;</li>
@@ -20,7 +20,7 @@
     </ul>
   </div>
   <div class="col">
-    <ul>
+  <ul class="text-left">
       <li>Fruit juices</li>
       <li>Iodized salt &#40;table&#41;</li>
       <li>Sugar, natural & artificial sweeteners &#40;including brown sugar, 
@@ -38,7 +38,7 @@
 <div class="row">
   <div class="col-md-5 align-middle"><br>
     <p><u>For support, use the resources on this site&colon;</u></p>
-      <ul>
+    <ul class="text-left">
         <li><a href="recipes-public.php">Recipe Links</a></li>
         <li><a href="resources.php">Resources</a></li>
         <li><a href="about-membership.php">Learn about becoming a member</a></li>
