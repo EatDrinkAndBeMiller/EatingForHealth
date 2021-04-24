@@ -5,10 +5,10 @@
 </div>
   <div class="container">
   <div class="row">
-    <div class="col-2">
-    <img src="images/glutenfree.jpg" class="text-end" alt="Gluten Replacements" style="width:150px;"> <br>
+    <div class="col-3">
+    <img src="images/glutenfree.jpg" class="text-end" alt="Gluten Replacements" style="width:150px; float:right"> <br>
     </div>
-    <div class="col-5">
+    <div class="col-4">
     <p class="text-left">Flour/Gluten Replacements</p>
     <ul class="text-left">
       <li>Almond Flour</li>
@@ -17,7 +17,7 @@
       <li>Ground Golden Flaxseed</li>
     </ul>
     </div>
-    <div class="col-5">
+    <div class="col-4">
     <p class="text-left"></p><br>
     <ul class="text-left">
       <li>Brown Rice Flour</li>
@@ -30,8 +30,8 @@
 </div><br>
   <div class="container">
   <div class="row">
-    <div class="col-2">
-    <img src="images/sugar.jpg" class="text-end" alt="Sugar Replacements" style="width:150px;"> <br>
+    <div class="col-3">
+    <img src="images/sugar.jpg" class="text-end" alt="Sugar Replacements" style="width:150px; float:right"> <br>
     </div>
     <div class="col-3">
     <p class="text-left">Sugar/Sweetener Replacements</p>
@@ -49,7 +49,7 @@
       <li>Xylitol</li>
     </ul>
     </div>
-    <div class="col-3">
+    <div class="col-2">
     <p class="text-left"></p><br>
     <ul class="text-left">
       <li>Monk Fruit</li>
@@ -63,8 +63,8 @@
 
   <div class="container">
   <div class="row">
-    <div class="col-2">
-    <img src="images/eggsubs.jpg" class="text-end" alt="Egg Replacements" style="width:150px;"> <br>
+    <div class="col-3">
+    <img src="images/eggsubs.jpg" class="text-end" alt="Egg Replacements" style="width:150px; float:right"> <br>
     </div>
     <div class="col-3">
     <p class="text-left">Egg Replacements</p>
@@ -96,8 +96,8 @@
 
   <div class="container">
   <div class="row">
-    <div class="col-2">
-    <img src="images/dairysub.jpg" class="text-end" alt="Gluten Replacements" style="width:150px;"> <br>
+    <div class="col-3">
+    <img src="images/dairysub.jpg" class="text-end" alt="Gluten Replacements" style="width:150px; float:right"> <br>
     </div>
     <div class="col-5">
     <p class="text-left">Flour/Gluten Replacements</p>
