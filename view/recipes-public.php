@@ -1,8 +1,34 @@
 <?php include('header.php') ?>
 
-<h1 class="text-center">Recipe Links</h1>
+<h1 class="text-center">Recipe Links</h1><br>
 
-<h4>Breakfast</h4>
+<div class="row">
+  <div class="col-md-6 text center">
+    <h5><u>Categories</u></h5>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <a href="#breakfast">Breakfast</a><br>
+    <a href="#snacks-sides">Snacks &amp; Sides</a><br>
+    <a href="#entrees">Entrees</a>
+  </div>
+  <div class="col-md-3">
+    <a href="#desserts">Desserts</a><br>
+    <a href="#smoothies">Smoothies</a><br>
+    <a href="#sauces-seasonings">Sauces &amp; Seasonings</a>
+  </div>
+  <div class="col-md-6 text-center">
+    <p>Want to search these recipes and more?</p>
+    <a href="about-membership.php"><h5>Consider Membership</h5></a>
+  </div>
+</div>
+<br>
+
+<div class="card bg-light">
+  <div class="card-body h3 text-center dark-text" id="breakfast">Breakfast</div>
+</div>
 <div class="card-columns">
   <div class="card">
     <a href="https://www.paleorunningmomma.com/sausage-stuffed-acorn-squash-paleo-whole30/" target="_blank">
@@ -28,7 +54,9 @@
 </div>
 <br>
 
-<h4>Snacks &amp; Sides</h4>
+<div class="card bg-light">
+  <div class="card-body h3 text-center dark-text" id="snacks-sides">Snacks &amp; Sides</div>
+</div>
 <div class="card-columns">
   <div class="card">
     <a href="https://www.joyousapron.com/wprm_print/4900 " target="_blank">
@@ -53,7 +81,9 @@
 </div>
 <br>
 
-<h4>Entrees &#40;lunch &amp; dinner&#41;</h4>
+<div class="card bg-light">
+  <div class="card-body h3 text-center dark-text" id="entrees">Entrees &#40;lunch &amp; dinner&#41;</div>
+</div>
 <div class="card-columns">
   <div class="card">
     <a href="https://cookinglsl.com/honey-sriracha-chicken-quinoa-bowl/#wprm-recipe-container-24816" target="_blank">
@@ -244,7 +274,9 @@
 </div>
 <br>
 
-<h4>Desserts</h4>
+<div class="card bg-light">
+  <div class="card-body h3 text-center dark-text" id="desserts">Desserts</div>
+</div>
 <div class="card-columns">
   <div class="card">
     <a href="https://mymontanakitchen.com/chocolate-peanut-butter/#wprm-recipe-container-4918" target="_blank">
@@ -314,7 +346,9 @@
 </div>
 <br>
 
-<h4>Smoothies</h4>
+<div class="card bg-light">
+  <div class="card-body h3 text-center dark-text" id="smoothies">Smoothies</div>
+</div>
 <div class="card-columns">
   <div class="card">
     <a href="https://healthytasteoflife.com/healthy-breakfast-smoothies-as-meal-replacement-dairy-free-gluten-free-vegan/" target="_blank">
@@ -330,7 +364,9 @@
 </div>
 <br>
 
-<h4>Sauces &amp; Seasonings</h4>
+<div class="card bg-light">
+  <div class="card-body h3 text-center dark-text" id="sauces-seasonings">Sauces &amp; Seasonings</div>
+</div>
 <div class="card-columns">
   <div class="card">
     <a href="http://www.butteraddictgonepaleo.com/recipe/vegan-mayo-egg-soy-free/" target="_blank">
