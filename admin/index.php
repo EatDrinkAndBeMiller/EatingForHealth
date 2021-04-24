@@ -17,13 +17,26 @@
     $cook = filter_input(INPUT_POST, 'cook', FILTER_VALIDATE_INT);
     $total = filter_input(INPUT_POST, 'total', FILTER_VALIDATE_INT);
     $ing = filter_input(INPUT_POST, 'iname', FILTER_SANITIZE_STRING);
-    $img = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
+    $img = filter_input(INPUT_POST, 'img', FILTER_SANITIZE_STRING);
     $rid = filter_input(INPUT_POST, 'rid', FILTER_VALIDATE_INT);
+    $recipeID = filter_input(INPUT_POST, 'delete_recipe', FILTER_VALIDATE_INT);
+    $imageID = filter_input(INPUT_POST, 'delete_image', FILTER_VALIDATE_INT);
+    $ingredientID = filter_input(INPUT_POST, 'delete_ingredient', FILTER_VALIDATE_INT);
+    $catID = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
+    $algID = filter_input(INPUT_POST, 'allergen_id', FILTER_VALIDATE_INT);
+    $qty = filter_input(INPUT_POST, 'qty', FILTER_VALIDATE_INT);
+    $measure = filter_input(INPUT_POST, 'measure_id', FILTER_VALIDATE_INT);
+    $recipe_id = filter_input(INPUT_POST, 'recipe_id', FILTER_VALIDATE_INT);
+    $ingred_id = filter_input(INPUT_POST, 'ingred_id', FILTER_VALIDATE_INT);
+    $relationshipID = filter_input(INPUT_POST, 'delete_relationship', FILTER_VALIDATE_INT);
+
     
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
-        $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
         if (!$action) {
-            $action = 'list_recipe';
+            $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+            if (!$action) {
+                $action = 'list_recipe';
+            }
         }
 
     switch($action) {
@@ -49,12 +62,6 @@
             Recipe::add_recipe($name, $desc, $cat, $cid, $aid, $prep, $cook, $total, $a, $b, $c, $d);
             header("Location: .?action=list_recipe");
             break;
-        case "add_image":
-            include('view/add_image.php');
-            break;
-        case "add_relationship":
-            include('view/add_relationship.php');
-            break;
         case "add_ingredient":
             $ingredients = Recipe::get_all_ingredients();
             include('view/add_ingredient.php');
@@ -64,18 +71,39 @@
             header("Location: .?action=list_recipe");
             break;
         case "add_image":
-            $pics = Recipe::get_all_recipe_images();
+            $images = Recipe::get_all_recipe_images();
             include('view/add_image.php');
             break;
         case "addpic":
             Recipe::add_recipe_img($img, $rid);
-            header("Location: .?action=list_recipe");
-            break;
-        case "add_relationship":
-            include('view/add_relationship.php');
+            header("Location: .?action=add_image");
             break;
         case "add_ingredient":
             include('view/add_ingredient.php');
+            break;
+        case "add_relationship":
+            $relationship = Recipe::get_relationships();
+            include('view/add_relationship.php');
+            break;
+        case "relationship":
+            Recipe::add_relationship($recipe_id, $measure, $qty, $ingred_id, $algID, $catID);
+            header("Location: .?action=list_recipe");
+            break;
+        case "delete_recipe":
+            Recipe::delete_recipe($recipeID);
+            header("Location: .?action=list_recipe");
+            break;
+        case "delete_image":
+            Recipe::delete_recipe_image($imageID);
+            header("Location: .?action=add_image");
+            break;
+        case "delete_ingredient":
+            Recipe::delete_ingredient($ingredientID);
+            header("Location: .?action=add_ingredient");
+            break;
+        case "delete_relationship":
+            Recipe::delete_ingredient($relationshipID);
+            header("Location: .?action=add_relationship");
             break;
         case "list_recipe":
             $recipe = Recipe::get_all_recipes();

@@ -18,11 +18,19 @@
       <tr>
         <th>Ingredient ID</th>
         <th>Name</th>
+        <th>Delete Ingredient</th>
+
       </tr>
       <?php foreach ($ingredients as $i) : ?>
       <tr>
         <td><?php echo (empty($i)) ? 'No Matching Recipes' : $i['ingredient_id']; ?></td>
         <td><?php echo (empty($i)) ? 'No Matching Recipes' : $i['ingredient_name']; ?></td>
+        <td><form action="." method="post">
+        <input type="hidden" name="action"
+        value="delete_ingredient">
+        <input type="hidden" name="delete_ingredient" value=<?= $i['ingredient_id'] ?>>
+        <button class="remove-button" id="delete_ingredient">Remove</button>
+        </form></td>
       </tr>
       </form>
       <?php endforeach; ?>  

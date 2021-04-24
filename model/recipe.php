@@ -527,13 +527,60 @@ class Recipe {
         $pics = $statement->fetchAll();
         $statement->closeCursor();
         return $pics;
-    }
+}
     public static function add_recipe_img($img, $rid) {
         $db = Database::getDB();
         $query = 'INSERT INTO `recipe_images` (recipe_image, recipe_id) VALUES (:img_name, :rid)';
         $statement = $db->prepare($query);
         $statement->bindValue(':img_name', $img, PDO::PARAM_STR);
         $statement->bindValue(':rid', $rid, PDO::PARAM_INT);
+        $statement->execute();
+        $statement->closeCursor();
+}
+    public static function delete_recipe($recipeID) {
+        $db = Database::getDB();
+        $query = 'DELETE FROM recipe WHERE recipe_id = :recipeID';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':recipeID', $recipeID);
+        $statement->execute();
+        $statement->closeCursor();
+}
+    public static function delete_recipe_image($imageID) {
+        $db = Database::getDB();
+        $query = 'DELETE FROM recipe_images WHERE recipe_image_id = :recipeID';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':recipeID', $imageID);
+        $statement->execute();
+        $statement->closeCursor();
+}
+    public static function delete_ingredient($ingredientID) {
+        $db = Database::getDB();
+        $query = 'DELETE FROM ingredients WHERE ingredient_id = :ingredientID';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':ingredientID', $ingredientID);
+        $statement->execute();
+        $statement->closeCursor();
+}
+    public static function get_relationships() {
+        $db = Database::getDB();
+        $query = 'SELECT * FROM recipe_ingredients';
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $relationship = $statement->fetchAll();
+        $statement->closeCursor();
+        return $relationship;
+}
+    public static function add_relationship($recipe_id, $measure, $qty, $ingred_id, $algID, $catID) {
+        $db = Database::getDB();
+        $query = 'INSERT INTO `recipe_ingredients` (recipe_id, measurement_id, measurement_qty_id, ingredient_id, allergen_id, category_id)
+        VALUES (:recipe_id, :measurement_id, :measurement_qty_id, :ingredient_id, :allergen_id, :category_id)';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
+        $statement->bindValue(':measurement_id', $measure, PDO::PARAM_INT);
+        $statement->bindValue(':measurement_qty_id', $qty, PDO::PARAM_INT);
+        $statement->bindValue(':ingredient_id', $ingred_id, PDO::PARAM_INT);
+        $statement->bindValue(':allergen_id', $algID, PDO::PARAM_INT);
+        $statement->bindValue(':category_id', $catID, PDO::PARAM_INT);
         $statement->execute();
         $statement->closeCursor();
 }
