@@ -75,7 +75,8 @@
 
 <br>
 <!--need to add more-->
-<h3>Consider Membership!</h3>
+<a href="login.php"><img src="images/link_to_membership.png" 
+  alt="benefits of membership with link to register" width="100%"></a>
 
 
 <?php include('footer.php')?>

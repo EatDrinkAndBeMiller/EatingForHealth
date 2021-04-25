@@ -27,17 +27,20 @@
   </head>
   
 <body>
-    <div class="container">
-      <div class="row logos">
-        <div class="col-sm">
-          <a href="welcome.php">
-            <img src="images/E4H_logo_dark.jpg" class="text-left" alt="Logo for Eating 4 Health" style="width:150px;"></a>
-        </div>
-        <div class="col-sm"></div>
-        <div class="col-sm">
-        <img src="images/NBFM_logo.png" class="text-end" alt="New Beginnings Functional Medicine logo" style="width:200px;">
-        </div>
+  <div class="container">
+    <div class="row logos">
+      <div class="col-sm">
+        <a href="welcome.php">
+          <img src="images/E4H_logo_dark.jpg" class="text-left" alt="Logo for Eating 4 Health" 
+            style="width:150px;"></a>
       </div>
+      <div class="col-sm"></div>
+        <div class="col-sm">
+        <a href="https://www.newbeginningsfmc.com/" target="_blank">
+          <img src="images/NBFM_logo.png" class="text-end" alt="New Beginnings Functional Medicine logo" 
+            style="width:200px;"></a>
+      </div>
+    </div>
 
     <nav class="navbar topnav">
       <!--Bootstrap hamburger menu--needs to be on left-->
