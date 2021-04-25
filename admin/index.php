@@ -1,6 +1,7 @@
 <?php
     require('../model/database.php');
     require('../model/recipe.php');
+    require('../model/member.php');
 
     $meal = filter_input(INPUT_POST, 'meal', FILTER_VALIDATE_INT);
     $avoid = filter_input(INPUT_POST, 'avoid', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
@@ -20,6 +21,7 @@
     $img = filter_input(INPUT_POST, 'img', FILTER_SANITIZE_STRING);
     $rid = filter_input(INPUT_POST, 'rid', FILTER_VALIDATE_INT);
     $recipeID = filter_input(INPUT_POST, 'delete_recipe', FILTER_VALIDATE_INT);
+    $user_id = filter_input(INPUT_POST, 'delete_user', FILTER_VALIDATE_INT);
     $imageID = filter_input(INPUT_POST, 'delete_image', FILTER_VALIDATE_INT);
     $ingredientID = filter_input(INPUT_POST, 'delete_ingredient', FILTER_VALIDATE_INT);
     $catID = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
@@ -29,7 +31,15 @@
     $recipe_id = filter_input(INPUT_POST, 'recipe_id', FILTER_VALIDATE_INT);
     $ingred_id = filter_input(INPUT_POST, 'ingred_id', FILTER_VALIDATE_INT);
     $relationshipID = filter_input(INPUT_POST, 'delete_relationship', FILTER_VALIDATE_INT);
+    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    $confirm_password = filter_input(INPUT_POST, 'confirm_password', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $admin = filter_input(INPUT_POST, 'admin', FILTER_VALIDATE_BOOLEAN);
 
+    // if (!isset($_SESSION['is_valid_admin'])) {
+    //     $action = 'login';
+    // }
     
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
         if (!$action) {
@@ -85,6 +95,23 @@
             $relationship = Recipe::get_relationships();
             include('view/add_relationship.php');
             break;
+        case "user":
+            $users = Member::get_users();
+            include('view/add_user.php');
+            break;
+        case "add_user":
+            if (!Member::username_exists($username)) {
+                Member::add_user($username, $password, $email, $admin);
+                header("Location: .?action=list_recipe");
+            } else {
+                $login_message = 'Username must be unique!';
+                include('../view/login.php');
+            }
+            break;
+        case "delete_user":
+            Member::delete_user($user_id);
+            header("Location: .?action=list_recipe");
+            break;
         case "relationship":
             Recipe::add_relationship($recipe_id, $measure, $qty, $ingred_id, $algID, $catID);
             header("Location: .?action=list_recipe");
@@ -105,6 +132,14 @@
             Recipe::delete_ingredient($relationshipID);
             header("Location: .?action=add_relationship");
             break;
+        case "login":
+            if (Member::is_valid_user($username, $password) && Member::is_admin($username)) {
+                $_SESSION['is_valid_admin'] = true;
+                include('view/admin.php');
+            } else {
+                $login_message = 'You must login as an Administrator to view this page';
+                include('../view/login.php');
+            }
         case "list_recipe":
             $recipe = Recipe::get_all_recipes();
             include('view/admin.php');

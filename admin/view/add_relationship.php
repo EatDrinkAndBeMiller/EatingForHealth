@@ -39,7 +39,7 @@
   <span class="input-group-text" id="inputGroup-sizing-default">Ingredient_ID (Number Only)</span>
   <input type="text" name="ingred_id" class="form-control" aria-label="Price" aria-describedby="inputGroup-sizing-default">
 </div>
-<button class="add-button bold" id="add">Add Recipe</button>
+<button class="add-button bold" id="add">Add Relationship</button>
     </form>
     </header>
 

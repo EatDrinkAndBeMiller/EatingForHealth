@@ -1,4 +1,8 @@
 <?php
+    $lifetime = 60 * 60 * 24 * 7; //one week
+    session_set_cookie_params($lifetime, '/');
+    session_start();
+
     require('model/database.php');
     require('model/recipe.php');
 
