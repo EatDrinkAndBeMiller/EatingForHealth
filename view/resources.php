@@ -16,7 +16,7 @@
 
   <div class="col-md-4 align-middle"><br><br>
     <h4><u>Resources on this site&colon;</u></h4>
-      <ul>
+    <ul class="text-left">
         <li><a href="diet.php">Details about the Diet</a></li>
         <li><a href="recipes-public.php">Recipe Links</a></li>
         <li><a href="about-membership.php">Learn about becoming a member</a></li>
