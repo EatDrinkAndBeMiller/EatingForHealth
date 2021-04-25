@@ -1,3 +1,6 @@
+<?php
+    require_once('util/valid_admin.php');
+?>
 <!doctype html>
 <html lang="en">
   <head>

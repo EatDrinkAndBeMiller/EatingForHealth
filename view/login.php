@@ -8,7 +8,7 @@
             <?php } else { ?>
                 <h2>Please fill in your credentials to login.</h2>
             <?php } ?>
-            <form action="." method="POST" class="admin_login_form">
+            <form action="." method="POST" class="login_form">
                 <input type="hidden" name="action" value="login">
                 
                     <label for="username">Username:</label>
@@ -24,6 +24,4 @@
             </form>
         </section>
     </main>
-</body>
-</html>
 <?php include('footer.php')?>

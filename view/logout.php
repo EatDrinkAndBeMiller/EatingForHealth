@@ -15,11 +15,10 @@
     $path = $params['path'];
     $domain = $params['domain'];
     $secure = $params['secure'];
-    $httponly = $params['httponly'];
-    setcookie($name, '', $expire, $path, $domain, $secure, $httponly);
+    setcookie($name, '', $expire, $path, $domain, $secure);
 ?>
 <br>
-<h1 class="thank_you">Thank you for signing out, <?= $firstname ?>.</h1>
+<h1 class="thank_you">Thank you for signing out, <?= $username ?>.</h1>
 <br>
 <p><a href=".">Click here</a> to return to the webpage.</p>
 <br>

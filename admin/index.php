@@ -3,6 +3,14 @@
     require('../model/recipe.php');
     require('../model/member.php');
 
+    $lifetime = 60 * 60 * 24 * 7; //one week
+    session_set_cookie_params($lifetime, '/');
+    session_start();
+
+    if (Member::is_admin($_SESSION['userid']) > 0) {
+        $_SESSION['is_valid_admin'] = true;
+    }
+
     $meal = filter_input(INPUT_POST, 'meal', FILTER_VALIDATE_INT);
     $avoid = filter_input(INPUT_POST, 'avoid', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
     $name = filter_input(INPUT_POST, 'recipe_name', FILTER_SANITIZE_STRING);
@@ -36,11 +44,7 @@
     $confirm_password = filter_input(INPUT_POST, 'confirm_password', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $admin = filter_input(INPUT_POST, 'admin', FILTER_VALIDATE_BOOLEAN);
-
-    // if (!isset($_SESSION['is_valid_admin'])) {
-    //     $action = 'login';
-    // }
-    
+  
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
         if (!$action) {
             $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
@@ -67,6 +71,12 @@
             break;
         case "add_recipe":
             include('view/add_recipe.php');
+            break;
+        case "login":
+
+            break;
+        case "logout":
+            header("Location: ..?action=logout");
             break;
         case "add":
             Recipe::add_recipe($name, $desc, $cat, $cid, $aid, $prep, $cook, $total, $a, $b, $c, $d);
@@ -132,14 +142,6 @@
             Recipe::delete_ingredient($relationshipID);
             header("Location: .?action=add_relationship");
             break;
-        case "login":
-            if (Member::is_valid_user($username, $password) && Member::is_admin($username)) {
-                $_SESSION['is_valid_admin'] = true;
-                include('view/admin.php');
-            } else {
-                $login_message = 'You must login as an Administrator to view this page';
-                include('../view/login.php');
-            }
         case "list_recipe":
             $recipe = Recipe::get_all_recipes();
             include('view/admin.php');

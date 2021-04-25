@@ -57,9 +57,9 @@ class Member {
         $statement->bindValue(':username', $username);
         $statement->execute();
         $result = $statement->fetchColumn();
+        $statement->closeCursor();
         return $result;
     }
-
     public static function username_exists($username) {
         $db = Database::getDB();
         // see if the username already exists

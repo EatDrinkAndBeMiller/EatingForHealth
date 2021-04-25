@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="view/css/main.css">
 
     <style>
     table, th, td {
@@ -63,4 +63,21 @@
             </li>
         </ul>
     </nav>
+    <div class="login">
+
+            <?php if (!isset($_SESSION['userid'])) { ?>
+
+                <a href=".?action=login">Log in</a>
+
+            <?php } else if (isset($_SESSION['userid']) && $action !== 'logout') { 
+                    $userid = $_SESSION['userid'];
+            ?>
+
+            <p>
+                Welcome <?= $userid ?>! (<a href=".?action=logout">Sign Out</a>)
+            </p>
+
+            <?php } ?>
+        </div>
+
 

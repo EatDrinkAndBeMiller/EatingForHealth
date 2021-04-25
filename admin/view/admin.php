@@ -29,6 +29,7 @@
     <a href="./index.php?action=add_ingredient">Add Ingredient</a><br>
     <a href="./index.php?action=add_image">Add Recipe Image</a><br>
     <a href="./index.php?action=add_relationship">Add Relationship</a><br>
-    <a href="./index.php?action=user">Add User</a>
+    <a href="./index.php?action=user">Add User</a><br>
+
 
 <?php include('footer.php'); ?>

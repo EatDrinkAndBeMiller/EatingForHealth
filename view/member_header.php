@@ -1,3 +1,6 @@
+<?php
+    require_once('util/valid_user.php');
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -63,21 +66,3 @@
             </li>
         </ul>
     </nav>
-    <header>
-        <div class="loggedin">
-
-            <?php if (!isset($_SESSION['userid']) { ?>
-
-                <a href=".?action=login">Login</a>
-
-            <?php } else if (isset($_SESSION['userid']) && $action !== 'logout') { 
-                    $userid = $_SESSION['userid'];
-            ?>
-
-            <p>
-                Welcome <?= $userid ?>! (<a href=".?action=logout">Sign Out</a>)
-            </p>
-
-            <?php } ?>
-        </div>
-    </header>

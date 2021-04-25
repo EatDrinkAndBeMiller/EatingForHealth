@@ -5,9 +5,13 @@
 
     require('model/database.php');
     require('model/recipe.php');
+    require('model/member.php');
 
     $meal = filter_input(INPUT_POST, 'meal', FILTER_VALIDATE_INT);
     $avoid = filter_input(INPUT_POST, 'avoid', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
+    $username = trim(filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING));
+    $password = trim(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING));
+
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
     if (!$action) {
         $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
@@ -38,6 +42,22 @@
             break;
         case "single_recipe":
             include('view/single_recipe.php');
+            break;
+        case "login":
+            $admin = Member::is_admin($username);
+            if (Member::is_valid_user($username, $password) && $admin > 0) {
+                $_SESSION['userid'] = $username;
+                header("Location: ./admin/index.php?action=list_recipe");
+            } elseif (Member::is_valid_user($username, $password) && $admin < 1) {
+                $_SESSION['userid'] = $username;
+                header("Location: .?action=welcome");
+            } else {
+                $login_message = 'Please Log in';
+                include('view/login.php');
+            }
+            break;
+        case "logout":
+            include('view/logout.php');
             break;
         case "list_recipe_options":
             if (!$avoid) {
