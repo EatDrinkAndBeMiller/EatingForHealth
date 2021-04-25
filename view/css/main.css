@@ -9,6 +9,11 @@
 
     .btn-primary {
       background-color: #072968;
+      color: #fff;
+    }
+
+    button a {
+      color: #fff;
     }
 
     /* Add a gray background color and some padding to the footer */
@@ -27,6 +32,9 @@
     @media (max-width: 600px) {
       .carousel-caption {
         display: none; 
+      }
+      .nbfm-logo {
+        display: none;
       }
     }
   

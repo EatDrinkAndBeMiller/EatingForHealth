@@ -28,6 +28,7 @@
   
 <body>
   <div class="container">
+  <nav>
     <div class="row logos">
       <div class="col-sm">
         <a href="welcome.php">
@@ -35,14 +36,14 @@
             style="width:150px;"></a>
       </div>
       <div class="col-sm"></div>
-        <div class="col-sm">
+        <div class="col-sm nbfm-logo">
         <a href="https://www.newbeginningsfmc.com/" target="_blank">
           <img src="images/NBFM_logo.png" class="text-end" alt="New Beginnings Functional Medicine logo" 
             style="width:200px;"></a>
       </div>
     </div>
 
-    <nav class="navbar topnav">
+    <div class="navbar topnav">
       <!--Bootstrap hamburger menu--needs to be on left-->
       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -72,5 +73,6 @@
           </div>
         </li>
       </ul>
+    </div>
     </nav>
 
