@@ -22,7 +22,7 @@
       <td>Toasted gluten free bread with almond or sunflower butter<br>OR<br>Smoothie</td>
       <td>Apple with almond butter</td>
       <td>Turkey sausage</td>
-      <td>Grain-free apple cinnamon Porridge (see link below)</td>
+      <td>Grain-free apple cinnamon Porridge</td>
     </tr>
     <tr>
       <th scope="row">Snack</th>
