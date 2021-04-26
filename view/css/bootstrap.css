@@ -60,7 +60,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #1e8ea7;
+  background-color: #fff;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -550,7 +550,6 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #ffffff;
 }
 
 @media (min-width: 576px) {
@@ -607,7 +606,6 @@ pre code {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  text-align: center;
 }
 
 .col {

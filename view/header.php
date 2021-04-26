@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="icon" href="view/images/logo.png" type="image/png">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="view/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="view/css/main.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
     </style>
@@ -23,13 +23,13 @@
     <div class="row logos">
       <div class="col-sm">
         <a href="index.php">
-          <img src="images/E4H_logo_dark.jpg" class="text-left" alt="Logo for Eating 4 Health" 
+          <img src="view/images/E4H_logo_dark.jpg" class="text-left" alt="Logo for Eating 4 Health" 
             style="width:150px;"></a>
       </div>
       <div class="col-sm"></div>
         <div class="col-sm nbfm-logo">
         <a href="https://www.newbeginningsfmc.com/" target="_blank">
-          <img src="images/NBFM_logo.png" class="text-end" alt="New Beginnings Functional Medicine logo" 
+          <img src="view/images/NBFM_logo.png" class="text-end" alt="New Beginnings Functional Medicine logo" 
                style="width:200px;"></a>
       </div>
     </div>
@@ -64,7 +64,6 @@
           </div>
         </li>
       </ul>
-    </div>
     </nav>
     <div class="login">
 
