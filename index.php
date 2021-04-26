@@ -36,6 +36,9 @@
         case "weekplan":
             include('view/weekplan.php');
             break;
+        case "public_recipes":
+            include('view/recipes-public.php');
+            break;
         case "list_recipe":
             $recipe = Recipe::get_all_recipes();
             include('view/recipes.php');

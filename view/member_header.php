@@ -11,19 +11,12 @@
     <link rel="icon" href="view/images/icon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
     <style>
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 5px;
-    }
+      @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
     </style>
+
     <title>Eating4Health</title>
   </head>
   
@@ -36,12 +29,18 @@
             <!-- <h1 class="text-center">Eating4Health</h1> -->
         </div>
         <div class="col-sm"></div>
-        <div class="col-sm">
-        <img src="view/images/NBFM_logo.png" class="text-end" alt="New Beginnings Functional Medicine logo" style="width:200px;">
+        <div class="col-sm nbfm-logo">
+        <a href="https://www.newbeginningsfmc.com/" target="_blank">
+          <img src="images/NBFM_logo.png" class="text-end" alt="New Beginnings Functional Medicine logo" 
+               style="width:200px;"></a>
         </div>
       </div>
 
     <nav class="navbar topnav">
+        <!--Bootstrap hamburger menu--needs to be on left-->
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
         <ul class="nav nav-pills">
             <li class="nav-item">
                 <a class="nav-link" href="index.php">Home</a>
@@ -50,7 +49,10 @@
                 <a class="nav-link" href="index.php?action=diet">The Diet</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=diet">Recipe Links</a>
+                <a class="nav-link" href="index.php?action=public_recipes">Recipe Links</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.php?action=resources">Resources</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
@@ -61,8 +63,6 @@
                     <a class="dropdown-item" href="index.php?action=weekplan">Sample Week Plan</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?action=resources">Resources</a>
-            </li>
+
         </ul>
     </nav>

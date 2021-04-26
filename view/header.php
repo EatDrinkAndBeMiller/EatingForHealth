@@ -15,25 +15,14 @@
       @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
     </style>
 
-
-    <style>
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 5px;
-    }
-    </style>
     <title>Eating4Health</title>
   </head>
   
 <body>
   <div class="container">
-  <nav>
     <div class="row logos">
       <div class="col-sm">
-        <a href="welcome.php">
+        <a href="index.php">
           <img src="images/E4H_logo_dark.jpg" class="text-left" alt="Logo for Eating 4 Health" 
             style="width:150px;"></a>
       </div>
@@ -45,26 +34,26 @@
       </div>
     </div>
 
-    <div class="navbar topnav">
+    <nav class="navbar topnav">
       <!--Bootstrap hamburger menu--needs to be on left-->
       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> -->
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link" href="welcome.php">Home</a>
+          <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="diet.php">The Diet</a>
+          <a class="nav-link" href="index.php?action=diet">The Diet</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="recipes-public.php">Recipe Links</a>
+          <a class="nav-link" href="index.php?action=public_recipes">Recipe Links</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="resources.php">Resources</a>
+          <a class="nav-link" href="index.php?action=resources">Resources</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="meal-support.php" role="button" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
             Members</a>
           <div class="dropdown-menu topnav-dropdown">
             <a class="dropdown-item" href="login.php">Login&#47;Signup</a>
