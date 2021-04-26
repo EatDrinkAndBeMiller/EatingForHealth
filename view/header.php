@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <link rel="icon" href="images/logo.png" type="image/png">
 
     <!-- Bootstrap CSS -->
@@ -13,6 +14,7 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
     </style>
+
 
     <style>
     table, th, td {
@@ -39,7 +41,7 @@
         <div class="col-sm nbfm-logo">
         <a href="https://www.newbeginningsfmc.com/" target="_blank">
           <img src="images/NBFM_logo.png" class="text-end" alt="New Beginnings Functional Medicine logo" 
-            style="width:200px;"></a>
+               style="width:200px;"></a>
       </div>
     </div>
 
@@ -67,12 +69,29 @@
           <div class="dropdown-menu topnav-dropdown">
             <a class="dropdown-item" href="login.php">Login&#47;Signup</a>
             <a class="dropdown-item" href="about-membership.php">About Membership</a>
-            <a class="dropdown-item" href="substitutes.php">Substitutes</a>
-            <a class="dropdown-item" href="recipes.php">Recipes</a>
-            <a class="dropdown-item" href="weekplan.php">Sample Week Plan</a>
+            <a class="dropdown-item" href="index.php?action=substitutes">Substitutes</a>
+            <a class="dropdown-item" href="index.php?action=list_recipe">Recipes</a>
+            <a class="dropdown-item" href="index.php?action=weekplan">Sample Week Plan</a>
           </div>
         </li>
       </ul>
     </div>
     </nav>
+    <div class="login">
+
+            <?php if (!isset($_SESSION['userid'])) { ?>
+
+                <a href=".?action=login">Log in</a>
+
+            <?php } else if (isset($_SESSION['userid']) && $action !== 'logout') { 
+                    $userid = $_SESSION['userid'];
+            ?>
+
+            <p>
+                Welcome <?= $userid ?>! (<a href=".?action=logout">Sign Out</a>)
+            </p>
+
+            <?php } ?>
+        </div>
+
 
