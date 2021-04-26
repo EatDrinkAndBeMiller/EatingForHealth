@@ -6,7 +6,7 @@
 <p>For 30 days, you will avoid the foods listed on your food sensitivity test AND the following foods&colon;</p>
 <div class="row">
   <div class="col">
-    <ul>
+  <ul class="text-left">
       <li>Dairy &#40;no milk, cheese, yogurt, ghee, butter, margarine, shortening, goat&rsquo;s milk&#41;</li>
       <li>Eggs</li>
       <li>Gluten &#40;no wheat, oats, rye, barley which are typically found in breads, pasta, cereals&#41;</li>
@@ -20,7 +20,7 @@
     </ul>
   </div>
   <div class="col">
-    <ul>
+  <ul class="text-left">
       <li>Fruit juices</li>
       <li>Iodized salt &#40;table&#41;</li>
       <li>Sugar, natural & artificial sweeteners &#40;including brown sugar, 
@@ -38,11 +38,10 @@
 <div class="row">
   <div class="col-md-5 align-middle"><br>
     <p><u>For support, use the resources on this site&colon;</u></p>
-      <ul>
-        <li><a href="substitutes.php">Substitutes</a></li>
-        <li><a href="recipes.php">Recipes</a></li>
-        <li><a href="weekplan.php">Weekly Planner</a></li>
+    <ul class="text-left">
+        <li><a href="recipes-public.php">Recipe Links</a></li>
         <li><a href="resources.php">Resources</a></li>
+        <li><a href="about-membership.php">Learn about becoming a member</a></li>
       </ul>
     <br>
     <p><a href="resource_files/Anti-inflammatoryEliminationDiet.pdf" target="_blank">Download Phase 1 List</a> &#40;PDF&#41;</p>
@@ -69,12 +68,15 @@
     <li>To learn how to find and choose healthy food in the store, including how to read ingredient lists</li>
     <li>To make sure you are drinking enough water every day &#40;drink 1/2 of your body&rsquo;s weight&#41;</li>
     <li>To learn to include protein and vegetables in your meals</li>
+    <li>Learn more about the benefits of the elimination diet in Dr. Shannon&rsquo;s blog&colon; 
+        <a href="https://www.newbeginningsfmc.com/food-sensitivities" target="_blank">Food Sensitivities</a></li>
   </ol>
 <p><a href="resource_files/goalsOfDiet.pdf" target="_blank">Download the goals list</a> &#40;PDF&#41;</p>
 
 <br>
 <!--need to add more-->
-<h3>Consider Membership!</h3>
+<a href="login.php"><img src="images/link_to_membership.png" 
+  alt="benefits of membership with link to register" width="100%"></a>
 
 
 <?php include('footer.php')?>
