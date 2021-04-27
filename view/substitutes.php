@@ -5,8 +5,9 @@
   <div class="row">
     <div class="col-md-3 text-center">
       <a href="index.php?action=sub-flours">
-      <img src="view/images/glutenfree.jpg" alt="Gluten Replacements"> 
+        <img src="view/images/glutenfree.jpg" alt="Gluten Replacements"> 
       </a><br>
+      <small class="text-muted">Image&colon; Baibaz | Shutterfly</small>
     </div>
     <div class="col-md-8">
       <h4 class="text-left dark-text"><a href="index.php?action=sub-flours">Flour/Gluten Replacements</a></h4>
@@ -35,8 +36,9 @@
   <div class="row">
     <div class="col-md-3 text-center">
       <a href=".?action=sub-sweeteners">
-      <img src="view/images/sugar.jpg" alt="Sugar Replacements"> 
+        <img src="view/images/sugar.jpg" alt="Sugar Replacements"> 
       </a><br>
+      <small class="text-muted">Image&colon; Laser &amp; Dermatology Institute of CA</small>
     </div>
     <div class="col-md-8">
       <h4 class="text-left dark-text"><a href=".?action=sub-sweeteners">Sugar/Sweetener Replacements</a></h4>
@@ -71,8 +73,9 @@
   <div class="row">
     <div class="col-md-3 text-center">
       <a href="index.php?action=sub-eggs">
-      <img src="view/images/eggsubs.jpg" alt="Egg Replacements"> 
+        <img src="view/images/eggsubs.jpg" alt="Egg Replacements"> 
       </a><br>
+      <small class="text-muted">Image&colon; Food Allergy Canada</small>
     </div>
     <div class="col-md-8">
       <h4 class="text-left dark-text"><a href="index.php?action=sub-eggs">Egg Replacements</a></h4>
@@ -105,7 +108,9 @@
 
   <div class="row">
     <div class="col-md-3 text-center">
-      <img src="view/images/dairysub.jpg" alt="Gluten Replacements"> <br>
+      <img src="view/images/dairysub.jpg" alt="Gluten Replacements"> 
+      <br>
+      <small class="text-muted">Image&colon; Healthily</small>
     </div>
     <div class="col-md-5">
       <h4 class="text-left text-dark">Dairy Replacements</h4>
