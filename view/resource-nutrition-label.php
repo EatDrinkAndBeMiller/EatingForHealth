@@ -104,7 +104,7 @@
         <li><a href="https://www.mamasezz.com/blogs/news/how-to-read-a-nutrition-label?utm_source=pinterest&utm_medium=social" target="_blank">Mama Sezz | Learn How to Read a Nutrition Label</a></li>
     </ul><br><br>
 
-<img src="images/resources-pg/Nutrition-label.jpg" 
+<img src="view/images/resources-pg/Nutrition-label.jpg" 
     alt="a sample nutritional label with items to look out for" 
     width="100%">
 <br>

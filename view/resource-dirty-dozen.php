@@ -10,7 +10,7 @@
 
 <p>To get both lists for printing, check out <a href="https://www.ewg.org/foodnews/" target="_blank">ewg.org and sign up for their mailing list</a>.</p>
 
-<img src="images/resources-pg/dirty-dozen_clean-15.jpg" 
+<img src="view/images/resources-pg/dirty-dozen_clean-15.jpg" 
     alt="list of dirty dozen (grapes, necturines, strawberries, bell peppers, potatoes, celery, apples, hot peppers, cucumbers, tomatoes, kale, collard greens & spinach, and summer squash & zucchini)
      and clean 15 (cabbage, avocadoes, grapefruit, eggplant, cantaloupe, mushrooms, frozen peas, kiwi, mangoes, onions, sweet corn, sweet potatoes, pineapple, asparagus, and papayas produce with pictures" 
     width="100%">

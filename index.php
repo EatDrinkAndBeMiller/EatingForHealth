@@ -61,6 +61,9 @@
         case "single_recipe":
             include('view/single_recipe.php');
             break;
+        case "about-membership":
+            include('view/about-membership.php');
+            break;
         case "login":
             $admin = Member::is_admin($username);
             if (Member::is_valid_user($username, $password) && $admin > 0) {

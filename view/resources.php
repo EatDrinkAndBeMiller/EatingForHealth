@@ -23,6 +23,7 @@
         <li><a href="index.php?action=substitutes">Substitutes (Member Content)</a></li>
         <li><a href="index.php?action=list_recipe">Exclusive Recipes (Member Content)</a></li>
         <li><a href="index.php?action=weekplan">Weekly Planner (Member Content)</a></li>
+      </ul>
   </div>
 </div>
 <br>

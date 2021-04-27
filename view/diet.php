@@ -38,13 +38,16 @@
 <div class="row">
   <div class="col-md-5 align-middle"><br>
     <p><u>For support, use the resources on this site&colon;</u></p>
-    <ul class="text-left">
-        <li><a href="recipes-public.php">Recipe Links</a></li>
-        <li><a href="resources.php">Resources</a></li>
-        <li><a href="about-membership.php">Learn about becoming a member</a></li>
+      <ul class="text-left">
+        <li><a href="index.php?action=listrecipe">Recipe Links</a></li>
+        <li><a href="index.php?action=resources">Resources</a></li>
+        <li><a href="index.php?action=substitutes">Substitutes (Member Content)</a></li>
+        <li><a href="index.php?action=list_recipe">Exclusive Recipes (Member Content)</a></li>
+        <li><a href="index.php?action=weekplan">Weekly Planner (Member Content)</a></li>
+      </ul>
       </ul>
     <br>
-    <p><a href="resource_files/Anti-inflammatoryEliminationDiet.pdf" target="_blank">Download Phase 1 List</a> &#40;PDF&#41;</p>
+    <p><a href="view/resource_files/Anti-inflammatoryEliminationDiet.pdf" target="_blank">Download Phase 1 List</a> &#40;PDF&#41;</p>
   </div>
 
   <div class="col-md-7">
@@ -71,11 +74,11 @@
     <li>Learn more about the benefits of the elimination diet in Dr. Shannon&rsquo;s blog&colon; 
         <a href="https://www.newbeginningsfmc.com/food-sensitivities" target="_blank">Food Sensitivities</a></li>
   </ol>
-<p><a href="resource_files/goalsOfDiet.pdf" target="_blank">Download the goals list</a> &#40;PDF&#41;</p>
+<p><a href="view/resource_files/goalsOfDiet.pdf" target="_blank">Download the goals list</a> &#40;PDF&#41;</p>
 
 <br>
 <!--need to add more-->
-<a href="login.php"><img src="images/link_to_membership.png" 
+<a href=".?action=about-membership"><img src="view/images/link_to_membership.png" 
   alt="benefits of membership with link to register" width="100%"></a>
 
 
