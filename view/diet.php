@@ -52,9 +52,11 @@
 
   <div class="col-md-7">
   <b>Take a tour of the site&colon;</b>
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-    </div>
+    <img src="view/images/site-tour_open-slide.png" alt="placeholder for site tour video" width="100%">
+      <!-- iframe for tutorial video:
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+      </div> -->
   </div>
 </div>
 
