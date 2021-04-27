@@ -23,7 +23,7 @@
           <ul class="text-left">
             <li>Brown Rice Flour</li>
             <li>Garbanzo Flour</li>
-            <li>Quinoa Flour Flour</li>
+            <li>Quinoa Flour</li>
             <a href="index.php?action=sub-flours">Read More...</a><br>
           </ul>
         </div>

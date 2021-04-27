@@ -67,7 +67,7 @@
   </tbody>
 </table>
 <br><br>
-<p>Download <a href="view/resource_files/Sample Weekly Planner.pdf" target="_blank">the Sample Weekly Planner&#40;PDF&#41;</a></p>
-<p>Download <a href="view/resource_files/Blank Weekly Planner.pdf" target="_blank">a Blank Weekly Planner&#40;PDF&#41;</a></p>
+<p>Download the<a href="view/resource_files/SampleWeeklyPlanner.pdf" target="_blank"> Sample Weekly Planner&#40;PDF&#41;</a></p>
+<p>Download a<a href="view/resource_files/BlankWeeklyPlanner.pdf" target="_blank"> Blank Weekly Planner&#40;PDF&#41;</a></p>
 
 <?php include('footer.php')?>
