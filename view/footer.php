@@ -17,9 +17,9 @@
       <a href="https://www.linkedin.com/in/kaylee-hill-85750714b" target="_blank">Kaylee Hill <br>
     </div>
     <div class="col order-1">
-      <a href="welcome.php">Home</a> <br>
-      <a href="diet.php">The Diet</a> <br>
-      <a href="resources.php">Resources</a> 
+      <a href="index.php?action=welcome">Home</a> <br>
+      <a href="index.php?action=diet">The Diet</a> <br>
+      <a href="index.php?action=resources">Resources</a> 
         <br><br>
       <a href="https://cdn.websites.hibu.com/03b83eb1b4364a429b55b70c5552403c/files/uploaded/New%20Beginnings%20Functional%20Disclaimer.pdf" 
         target="_blank">Disclaimer</a> <br>

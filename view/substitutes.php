@@ -1,8 +1,7 @@
 <?php include('header.php')?>
-  
-<div class="container text-center">    
-  <h1 class="dark-text">Substitute Information</h1><br>
-</div>
+    
+  <h1 class="dark-text text-center">Substitute Information</h1><br>
+
   <div class="row">
     <div class="col-md-3 text-center">
       <a href="index.php?action=sub-flours">

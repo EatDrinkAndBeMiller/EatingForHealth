@@ -10260,9 +10260,11 @@ a.text-dark:hover, a.text-dark:focus {
   }
   body {
     min-width: 992px !important;
+    background-color: #1e8ea7;
   }
   .container {
     min-width: 992px !important;
+    background-color: #fff;
   }
   .navbar {
     display: none;
