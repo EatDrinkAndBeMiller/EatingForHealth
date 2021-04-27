@@ -43,6 +43,21 @@
             $recipe = Recipe::get_all_recipes();
             include('view/recipes.php');
             break;
+        case "resource-tips":
+            include('view/resource-tips.php');
+            break;
+        case "resource-shopping":
+            include('view/resource-shopping.php');
+            break;
+        case "resource-dirty-dozen":
+            include('view/resource-dirty-dozen.php');
+            break;
+        case "resource-nutrition":
+            include('view/resource-nutrition-label.php');
+            break;
+        case "resource-cleaning":
+            include('view/resource-cleaning.php');
+            break;
         case "single_recipe":
             include('view/single_recipe.php');
             break;

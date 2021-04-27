@@ -6,7 +6,7 @@
   <div class="container">
   <div class="row">
     <div class="col-3">
-    <img src="images/glutenfree.jpg" class="text-end" alt="Gluten Replacements" style="width:150px; float:right"> <br>
+    <img src="view/images/glutenfree.jpg" class="text-end" alt="Gluten Replacements" style="width:150px; float:right"> <br>
     </div>
     <div class="col-4">
     <p class="text-left">Flour/Gluten Replacements</p>
@@ -31,7 +31,7 @@
   <div class="container">
   <div class="row">
     <div class="col-3">
-    <img src="images/sugar.jpg" class="text-end" alt="Sugar Replacements" style="width:150px; float:right"> <br>
+    <img src="view/images/sugar.jpg" class="text-end" alt="Sugar Replacements" style="width:150px; float:right"> <br>
     </div>
     <div class="col-3">
     <p class="text-left">Sugar/Sweetener Replacements</p>
@@ -64,7 +64,7 @@
   <div class="container">
   <div class="row">
     <div class="col-3">
-    <img src="images/eggsubs.jpg" class="text-end" alt="Egg Replacements" style="width:150px; float:right"> <br>
+    <img src="view/images/eggsubs.jpg" class="text-end" alt="Egg Replacements" style="width:150px; float:right"> <br>
     </div>
     <div class="col-3">
     <p class="text-left">Egg Replacements</p>
@@ -97,7 +97,7 @@
   <div class="container">
   <div class="row">
     <div class="col-3">
-    <img src="images/dairysub.jpg" class="text-end" alt="Gluten Replacements" style="width:150px; float:right"> <br>
+    <img src="view/images/dairysub.jpg" class="text-end" alt="Gluten Replacements" style="width:150px; float:right"> <br>
     </div>
     <div class="col-5">
     <p class="text-left">Flour/Gluten Replacements</p>

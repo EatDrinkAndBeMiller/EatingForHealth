@@ -9,7 +9,7 @@
         <li>Eat protein with every meal.</li>
     </ul>
 
-<img src="images/resources-pg/cooking.png" alt="pan of cooked food with ingredients on counter" width="250px"><br>
+<img src="view/images/resources-pg/cooking.png" alt="pan of cooked food with ingredients on counter" width="250px"><br>
 <h4>Cooking</h4>
     <ul>
         <li>When cooking quinoa, use chicken broth instead of water for more flavor.</li>
@@ -20,24 +20,24 @@
         <li>Take the time to make several meals ahead of time for last minute needs.</li>
     </ul>
 
-<img src="images/resources-pg/shopping-2.png" alt="basket of fresh foods" width="250px"><br>
+<img src="view/images/resources-pg/shopping-2.png" alt="basket of fresh foods" width="250px"><br>
 <h4>Shopping</h4>
     <ul>
         <li>Take time to plan out your meals, including snacks.</li>
         <li>Make a shopping list.</li>
-        <li>ALWAYS read the nutrition facts label, especially the list of ingredients. <a href="resource-nutrition-label.php">Check out how to read a nurtition facts label.</a></li>
+        <li>ALWAYS read the nutrition facts label, especially the list of ingredients. <a href=".?action=resource-nutrition">Check out how to read a nurtition facts label.</a></li>
         <li>Products may look all natural on the front, or even organic, but always check the ingredients. It may not be healthy.</li>
         <li>Eat 7-13 servings of vegetables every day. One serving size is 1/2 cup.</li>
-        <li>Use the <a href="resource-dirty-dozen.php">Dirty Dozen and Clean Fifteen lists</a> to help determine which fruits and vegetables to buy organic.</li>        
+        <li>Use the <a href=".?action=resource-dirty-dozen">Dirty Dozen and Clean Fifteen lists</a> to help determine which fruits and vegetables to buy organic.</li>        
         <li>Check fliers for sales and coupons at nearby grocery stores.</li>
         <li>Check out online sources like <a href="www.vitacost.com" target="_blank">vitacost.com</a> and <a href="www.amazon.com" target="_blank">Amazon</a>.</li>
         <li>Some ingredients in the recipes on this site have affliate links to assist with finding unusual ingredients.</li>
         <li>Check out local farmer's markets or become part of a co-op.</li>
-        <li>Buy in bulk. Sam's Club and Costco carry many items in bulk. <a href="resource-shopping.php">Check-out the shopping lists on this site.</a></li>
+        <li>Buy in bulk. Sam's Club and Costco carry many items in bulk. <a href=".?action=resource-shopping">Check-out the shopping lists on this site.</a></li>
         <li>When buying frozen fruit & vegetables in bulk, check the ingredients label and make sure you are not buying anything that contains added sugar or preservatives.</li>
     </ul>
 
-<img src="images/resources-pg/eating-out.png" alt="healthy salad" width="250px"><br>
+<img src="view/images/resources-pg/eating-out.png" alt="healthy salad" width="250px"><br>
 <h4>Eating Out</h4>
     <ul>
         <li><b>MAD Greens</b> is great for salads. Remember to use oil and vinegar for dressing in the first phase.</li>
