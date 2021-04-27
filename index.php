@@ -64,6 +64,15 @@
         case "about-membership":
             include('view/about-membership.php');
             break;
+        case "sub-flours":
+            include('view/substitutes-flours.php');
+            break;
+        case "sub-sweeteners":
+            include('view/substitutes-sweeteners.php');
+            break;
+        case "sub-eggs":
+            include('view/substitutes-eggs.php');
+            break;
         case "login":
             $admin = Member::is_admin($username);
             if (Member::is_valid_user($username, $password) && $admin > 0) {
