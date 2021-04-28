@@ -14,7 +14,7 @@
     
     <p>There are many substitutes for eggs in cooking and baking. Which one to use depends on what you are making.<br><br>
 
-      This article does a great job explaining when to use each of the substitutes listed below: <a href="https://www.healthline.com/nutrition/egg-substitutes" target="_blank">13 Effective Substitutes for Eggs.</a><br><br>
+      This article does a great job explaining when to use each of the substitutes listed below: <a href="https://www.healthline.com/nutrition/egg-substitutes" target="_blank">13 Effective Substitutes for Eggs.</a><br>
 
       <ul class="text-left">
     <li>Applesauce</li>
