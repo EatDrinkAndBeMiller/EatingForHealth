@@ -1,7 +1,7 @@
 <?php include('header.php')?>
   
 <div class="container text-center">    
-  <h3><b><u>Egg Substitutions</u></b></h3><br>
+  <h3><b><u>Egg Substitutions</u></b></h3>
  <br>
 </div>
 <div class="row">
