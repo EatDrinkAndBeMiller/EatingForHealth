@@ -50,7 +50,7 @@
           <a class="nav-link" href="index.php?action=public_recipes">Recipe Links</a>
         </li>
 
-        <?php //if (isset($_SESSION['userid']) && $action !== 'logout') {  ?>
+        <?php if (isset($_SESSION['userid']) && $action !== 'logout') {  ?>
           <li class="nav-item">
             <a class="nav-link" href="index.php?action=substitutes">Substitutes</a>
           </li>
@@ -60,7 +60,17 @@
           <li class="nav-item">
             <a class="nav-link" href="index.php?action=weekplan">Sample Week Plan</a>
           </li>
-        <?php //} ?>
+        <?php } else { ?>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
+                Member Content</a>
+            <div class="dropdown-menu topnav-dropdown">
+                <a class="dropdown-item" href="index.php?action=substitutes">Substitutes</a>
+                <a class="dropdown-item" href="index.php?action=list_recipe">All Recipes</a>
+                <a class="dropdown-item" href="index.php?action=weekplan">Sample Week Plan</a>
+            </div>
+          </li>
+        <?php } ?>
 
         <li class="nav-item">
           <a class="nav-link" href="index.php?action=resources">Resources</a>

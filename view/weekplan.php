@@ -1,4 +1,6 @@
 <?php include('header.php')?>
+
+<br><h1 class="text-center">Sample Week Meal Plan</h1><br>
   
 <table class="table table-bordered">
   <thead>
