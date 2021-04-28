@@ -31,7 +31,7 @@
     <li>Agar-Agar or gelatin</li>
     <li>Soy Lecithin (only use if you can have soy)</li>
   </ul>
-  Pro Tip: When searching for recipes on the web, add “vegan” to avoid eggs (this also avoids dairy).
+  Pro Tip: When searching for recipes on the web, add “vegan” to avoid eggs (this also avoids dairy).<br><br>
     </div>
   </div>
 </div>
