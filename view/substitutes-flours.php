@@ -24,7 +24,7 @@ Because these flours lack gluten, many times a thickening agent like xanthan gum
   </ul>
   </p>
 
- <p><br><br>           
+<br><br>           
 <b><u>Almond Flour</u></b><br>
 Almond flour is the most common substitute for flour in baked goods. It can be substituted 1:1 for wheat flour in recipes. It’s recommended to add an additional egg as it will not rise like gluten-filled flour.<br><br>
 
