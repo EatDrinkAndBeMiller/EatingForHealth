@@ -29,7 +29,7 @@
     <div class="container">
       <div class="row logos">
         <div class="col-sm">
-          <a href="index.php">
+          <a href="../index.php">
             <img src="images//E4H_logo_dark.jpg" class="text-left" alt="Logo for Eating 4 Health" style="width:150px;"></a>
         </div>
         <div class="col-sm"></div>
@@ -47,51 +47,51 @@
       </button> -->
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Home</a>
+          <a class="nav-link" href="../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=diet">The Diet</a>
+          <a class="nav-link" href="../index.php?action=diet">The Diet</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=public_recipes">Recipe Links</a>
+          <a class="nav-link" href="../index.php?action=public_recipes">Recipe Links</a>
         </li>
 
         <?php if (isset($_SESSION['userid']) && $action !== 'logout') {  ?>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?action=substitutes">Substitutes</a>
+            <a class="nav-link" href="../index.php?action=substitutes">Substitutes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?action=list_recipe">All Recipes</a>
+            <a class="nav-link" href="../index.php?action=list_recipe">All Recipes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?action=weekplan">Sample Week Plan</a>
+            <a class="nav-link" href="../index.php?action=weekplan">Sample Week Plan</a>
           </li>
         <?php } else { ?>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="../index.php" role="button" aria-haspopup="true" aria-expanded="false">
                 Member Content</a>
             <div class="dropdown-menu topnav-dropdown">
-                <a class="dropdown-item" href="index.php?action=substitutes">Substitutes</a>
-                <a class="dropdown-item" href="index.php?action=list_recipe">All Recipes</a>
-                <a class="dropdown-item" href="index.php?action=weekplan">Sample Week Plan</a>
+                <a class="dropdown-item" href="../index.php?action=substitutes">Substitutes</a>
+                <a class="dropdown-item" href="../index.php?action=list_recipe">All Recipes</a>
+                <a class="dropdown-item" href="../index.php?action=weekplan">Sample Week Plan</a>
             </div>
           </li>
         <?php } ?>
 
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=resources">Resources</a>
+          <a class="nav-link" href="../index.php?action=resources">Resources</a>
         </li>
       </ul>
       <div class="login text-right">
         <?php if (!isset($_SESSION['userid'])) { ?>
-          <a href=".?action=about-membership">Register<!-- &#47;About Membership --></a> &nbsp; &nbsp;
-          <a href=".?action=login">Log in</a> 
+          <a href="../.?action=about-membership">Register<!-- &#47;About Membership --></a> &nbsp; &nbsp;
+          <a href="../.?action=login">Log in</a> 
             
         <?php } else if (isset($_SESSION['userid']) && $action !== 'logout') { 
                 $userid = $_SESSION['userid'];
         ?>
           <p>
-              Welcome <?= $userid ?>! (<a href=".?action=logout">Sign Out</a>)
+              Welcome <?= $userid ?>! (<a href="../.?action=logout">Sign Out</a>)
           </p>
         <?php } ?>
       </div>
