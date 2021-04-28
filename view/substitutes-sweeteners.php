@@ -1,7 +1,7 @@
 <?php include('header.php')?>
   
 <div class="container text-center">    
-  <h3>Add content from sweeteners page on Google Drive</h3><br>
- <br>
+  <h3><b><u>Sugar Substitutes - Alternative Sweeteners</u></b></h3><br>
+  </div>
 
 <?php include('footer.php')?>
