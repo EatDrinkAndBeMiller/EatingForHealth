@@ -7,11 +7,10 @@
     <select name="meal" class="form-select" aria-label="select meal" required>
     <option selected>View All Recipes</option>
     <option value="1">Breakfast</option>
-    <option value="2">Lunch</option>
-    <option value="3">Dinner</option>
-    <option value="4">Snack</option>
-    <option value="5">Dessert</option>
-    <option value="6">Drink</option>
+    <option value="2">Entree</option>
+    <option value="3">Snack</option>
+    <option value="4">Dessert</option>
+    <option value="5">Drink</option>
     </select>
     <label>Avoid</label>
 <div class="form-check form-check-inline">
