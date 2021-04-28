@@ -49,37 +49,37 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php?action=public_recipes">Recipe Links</a>
         </li>
+
+        <?php //if (isset($_SESSION['userid']) && $action !== 'logout') {  ?>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?action=substitutes">Substitutes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?action=list_recipe">All Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?action=weekplan">Sample Week Plan</a>
+          </li>
+        <?php //} ?>
+
         <li class="nav-item">
           <a class="nav-link" href="index.php?action=resources">Resources</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
-            Members</a>
-          <div class="dropdown-menu topnav-dropdown">
-            <a class="dropdown-item" href="login.php">Login&#47;Signup</a>
-            <a class="dropdown-item" href="about-membership.php">About Membership</a>
-            <a class="dropdown-item" href="index.php?action=substitutes">Substitutes</a>
-            <a class="dropdown-item" href="index.php?action=list_recipe">Recipes</a>
-            <a class="dropdown-item" href="index.php?action=weekplan">Sample Week Plan</a>
-          </div>
-        </li>
       </ul>
+      <div class="login text-right">
+        <?php if (!isset($_SESSION['userid'])) { ?>
+          <a href=".?action=about-membership">Register<!-- &#47;About Membership --></a> &nbsp; &nbsp;
+          <a href=".?action=login">Log in</a> 
+            
+        <?php } else if (isset($_SESSION['userid']) && $action !== 'logout') { 
+                $userid = $_SESSION['userid'];
+        ?>
+          <p>
+              Welcome <?= $userid ?>! (<a href=".?action=logout">Sign Out</a>)
+          </p>
+        <?php } ?>
+      </div>
     </nav>
-    <div class="login">
 
-            <?php if (!isset($_SESSION['userid'])) { ?>
-
-                <a href=".?action=login">Log in</a>
-
-            <?php } else if (isset($_SESSION['userid']) && $action !== 'logout') { 
-                    $userid = $_SESSION['userid'];
-            ?>
-
-            <p>
-                Welcome <?= $userid ?>! (<a href=".?action=logout">Sign Out</a>)
-            </p>
-
-            <?php } ?>
-        </div>
 
 
