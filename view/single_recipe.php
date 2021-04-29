@@ -29,18 +29,12 @@ $img = Recipe::get_image($id);
       </div>
       <h4>Ingredients</h4>
         <div class="form-check">
-          <!-- <div class="row">
-          <div class="col-md-8"> -->
           <?php foreach($ingredients as $i) : ?> 
             <input class="form-check-input" type="checkbox" value="<?php echo $i['ingredient_name']?>">
               <?php $formatted = $i["measurement_qty"]." ".$i["measurement"]." ".$i["ingredient_name"]; 
                 echo $formatted; ?><br>
             <?php endforeach; ?>
-          <!-- </div>
-          <div class="col-md-4"> -->
-            <button class="shopping-list btn btn-primary">Add Ingredients to <br> Shopping List</button>
-          <!-- </div>
-          </div> -->
+            <button class="shopping-list btn btn-primary">Add Ingredients to Shopping List</button>
         </div>
     </div>
   </div>
