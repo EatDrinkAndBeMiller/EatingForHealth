@@ -128,7 +128,8 @@ Typically, it is added to granulated sweeteners in baked goods when brown sugar 
 Coconut sugar also contains inulin, a soluble fiber that slows digestion. That’s what lowers its glycemic index. At the same time, inulin causes digestive issues for some people, so be sure to monitor that with your use of coconut sugar.<br><br>
 </p></div>
 
-<div id="sugartable">
+<div id="sugartable"></div>
+<div class="table-responsive">
 <u><b>Coversion chart for granulated sweeteners</b></u>
 <table class="table table-bordered">
   <thead>

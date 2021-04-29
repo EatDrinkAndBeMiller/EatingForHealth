@@ -102,6 +102,11 @@
       font-family: inherit;
       margin: 0;
     }
+
+    /* Space between card title and picture credit on resorces */
+    .card-title {
+      margin-bottom: 0;
+  }
     
     /* Style the dropdown content (hidden by default) */
     .dropdown-content {
