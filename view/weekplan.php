@@ -1,7 +1,8 @@
 <?php include('header.php')?>
 
 <br><h1 class="text-center">Sample Week Meal Plan</h1><br>
-  
+
+<div class="table-responsive">
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -68,7 +69,9 @@
     </tr>
   </tbody>
 </table>
-<br><br>
+</div>
+
+<br>
 <p>Download the<a href="view/resource_files/SampleWeeklyPlanner.pdf" target="_blank"> Sample Weekly Planner&#40;PDF&#41;</a></p>
 <p>Download a<a href="view/resource_files/BlankWeeklyPlanner.pdf" target="_blank"> Blank Weekly Planner&#40;PDF&#41;</a></p>
 
