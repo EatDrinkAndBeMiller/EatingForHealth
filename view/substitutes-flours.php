@@ -13,18 +13,19 @@ Because these flours lack gluten, many times a thickening agent like xanthan gum
 
 <u>Gluten-free Flour Replacements:</u>
   <ul class="text-left">
-    <li>Almond Flour</li>
-    <li>Coconut Flour</li>
-    <li>Garbanzo (or Chickpea) Flour</li>
-    <li>Brown Rice Flour</li>
-    <li>Ground Flaxseed</li>
-    <li>Quinoa Flour</li>
-    <li>Buckwheat Flour</li>
-    <li>Oat Flour</li>
+    <li><a href="#almond">Almond Flour</a></li>
+    <li><a href="#coco">Coconut Flour</a></li>
+    <li><a href="#garbanzo">Garbanzo (or Chickpea) Flour</a></li>
+    <li><a href="#brownrice">Brown Rice Flour</a></li>
+    <li><a href="#flaxseed">Ground Flaxseed</a></li>
+    <li><a href="#quinoa">Quinoa Flour</a></li>
+    <li><a href="#buckwheat">Buckwheat Flour</a></li>
+    <li><a href="#oat">Oat Flour</a></li>
   </ul>
+  <br>
   </p>
 
-<br><br>           
+<div id="almond">         
 <b><u>Almond Flour</u></b><br>
 Almond flour is the most common substitute for flour in baked goods. It can be substituted 1:1 for wheat flour in recipes. It’s recommended to add an additional egg as it will not rise like gluten-filled flour.<br><br>
 
@@ -43,8 +44,10 @@ Recipes for almond flour:<br>
     <li><a href="https://lowcarbyum.com/wprm_print/44719" target="_blank">Almond Flour Bread - Low Carb Yum</a> (contains eggs)</li>
     <li><a href="https://www.sweetashoney.co/wprm_print/23098" target="_blank">Almond Flour Pizza Crust - Sweetashoney</a> (contains eggs)</li>
   </ul>
-<br><br>
+  <br>
+</div>
 
+<div id="coco">
 <b><u>Coconut Flour</u></b><br>
 Coconut flour is made by drying coconut meat and grinding it into a flour. It will add a mild coconut flavor to baked goods.<br><br>
 
@@ -57,8 +60,10 @@ Recipes for coconut flour:<br>
     <li><a href="https://yummyinspirations.net/2019/04/gluten-free-banana-bread-with-coconut-flour/" target="_blank">Gluten Free Banana Bread With Coconut Flour - Yummy Inspirations</a> (contains dairy; <a href=".?action=sub-sweeteners">use a sweetener of choice</a>)</li>
     <li><a href="https://thesugarfreediva.com/wprm_print/8332" target="_blank">Keto Coconut Flour Bread - THE SUGAR FREE DIVA</a> (contains eggs)</li>
     </ul>
-<br><br>
+    <br>
+</div>
 
+<div id="garbanzo">  
 <b><u>Garbanzo (Chickpea) Flour</u></b><br>
 Garbanzo, or chickpea, flour is made from ground dried chickpeas or garbanzo beans. It has a nutty taste and is popular in Middle Eastern and Indian cuisine.<br><br>
 
@@ -74,8 +79,10 @@ Recipes for Garbanzo (Chickpea) Flour:
     <li><a href="https://yummyinspirations.net/2019/04/gluten-free-banana-bread-with-coconut-flour/" target="_blank">Gluten Free Banana Bread With Coconut Flour - Yummy Inspirations</a> (contains dairy; <a href=".?action=sub-sweeteners">use a sweetener of choice</a>)</li>
     <li><a href="https://thesugarfreediva.com/wprm_print/8332" target="_blank">Keto Coconut Flour Bread - THE SUGAR FREE DIVA</a> (contains eggs)</li>
     </ul>
-<br><br>
+    <br>
+</div>
 
+<div id="brownrice">  
 <b><u>Brown Rice Flour</u></b><br>
 Made from ground brown rice, it has nutty flavor. Brown rice flour works well for thickening sauces or making breaded foods like fish or chicken. It is also used to make noodles or combined with other gluten-free flours to make baked goods.<br><br>
 
@@ -86,8 +93,10 @@ Recipes for brown rice flour:<br>
     <li><a href="https://thehonoursystem.com/wprm_print/14137" target="_blank">Brown Rice Flour Pancakes – Gluten Free - The Honour System </a> (contains eggs; <a href=".?action=sub-sweeteners">use a sweetener of choice</a>)</li>
     <li><a href="https://www.oatmealwithafork.com/wprm_print/99789" target="_blank">Coconut Flour Cookies - The Best Ever! (paleo, keto, vegan options) - Texanerin Baking </a> (contains oats, eggs, and dairy)</li>
      </ul>
-<br><br>
+     <br>
+</div>
 
+<div id="flaxseed">  
 <b><u>Ground Flaxseed</u></b><br>
 Flaxseeds can be ground into a flour that is rich in fiber, omega-3s, and other nutrients. It has a nutty flavor and is rich in oils.<br><br>
 
@@ -99,10 +108,11 @@ Try ground flaxseed with coconut flour:<br>
 <ul class="text-left">
     <li><a href="https://lowcarbyum.com/wprm_print/24581" target="_blank">Coconut Flour Low Carb Flax Bread or Muffins - Low Carb Yum</a></li>
     </ul>
-<br><br>
+    <br>
+</div>
 
 
-
+<div id="quinoa">  
 <b><u>Quinoa Flour</u></b><br>
 Quinoa flour is made by grinding quinoa seeds; however, if you want to make this yourself, try using quinoa flakes from Natural Grocers. Quinoa seeds are very difficult to grind down in traditional kitchen appliances and require roasting first.<br><br>
 
@@ -116,8 +126,10 @@ Recipes with quinoa flour:<br>
     <li><a href="https://www.powerhungry.com/2011/10/quinoa-almond-soda-bread-vegan/#tasty-recipes-14463-jump-target" target="_blank">Quinoa Flour Almond Flour Soda Bread - Power Hungry</a></li>
     <li><a href="https://www.powerhungry.com/2012/05/double-quinoa-power-cookies/#tasty-recipes-14514-jump-target" target="_blank">Double Quinoa Power Cookies - Power Hungry</a> (contains eggs; <a href=".?action=sub-sweeteners">use a sweetener of choice</a>)</li>
     </ul>
-    <br><br>
+    <br>
+</div>
 
+<div id="buckwheat">  
 <b><u>Buckwheat Flour</u></b><br>
 Buckwheat flour comes from ground buckwheat groats. Although it contains the word “wheat,” it is not a wheat grain.<br><br>
 
@@ -127,8 +139,10 @@ Try this buckwheat and brown rice flour bread:<br>
 <ul class="text-left">
     <li><a href="https://www.powerhungry.com/2021/01/gluten-free-buckwheat-sandwich-bread-vegan-no-yeast/#tasty-recipes-22296-jump-target" target="_blank">Gluten-free Buckwheat Sandwich Bread - Power Hungry</a> (note: psyllium husks can be found at Natural Grocers and <a href="https://www.vitacost.com" target="_blank">vitacost.com.</a>)</li>
     </ul>
-    <br><br>
+    <br>
+</div>
 
+<div id="oat">  
 <b><u>Oat Flour</u></b><br>
 Oat flour is made by grinding whole oats. Its flavor is closer to all-purpose flour and baked goods have a chewy and crumbly texture. It works well in baked goods.<br><br>
 
@@ -140,7 +154,7 @@ Recipes with oat flour:<br>
     <li><a href="https://www.ambitiouskitchen.com/healthy-peanut-butter-banana-muffins-dairy-free-gluten-free/" target="_blank">Healthy Peanut Butter Banana Muffins - Ambitious Kitchen</a> (contains eggs)</li>
     <li><a href="https://confessionsofabakingqueen.com/oat-flour-banana-bread/#tasty-recipes-8156-jump-target" target="_blank">Oat Flour Banana Bread - Confession of a Baking Queen</a> (contains dairy)</li>
     </ul>
-
+</div>
 </p>
 
 
