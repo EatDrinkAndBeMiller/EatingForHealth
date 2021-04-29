@@ -29,6 +29,15 @@
       color: #fff;
     }
 
+    /*vertically-align*/
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
     /* Add a gray background color and some padding to the footer */
     footer {
         background-color: #2f2f2f;
