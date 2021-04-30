@@ -1,17 +1,21 @@
 //allow users to add ingredients to a shopping list
 
-//get value from checkbox
+/*get value from checkbox -- this function gets the values of boxes checked upon submitting,
+    iterates through values and adds them to an array*/
 let shoppingList = document.querySelector('.shopping-list');
 
-shoppingList.addEventListener('click', () => {
-    let checks = document.getElementsByClassName('form-check-input');
-    let array = [];
+function shoppingLists() {
+    shoppingList.addEventListener('click', function(event){
+        event.preventDefault();
+        
+        const checks = document.querySelectorAll(`input[name="ingredient"]:checked`);
+        let array = [];
 
-    for (i=0; i<25; i++) {
-        if(checks[i].checked) {
-            array.push(checks[i].value);
-        }
-    }
+        checks.forEach((check) => {
+            array.push(check.value);
+        });
+        console.log(array);
 
-    console.log(array);
-});
+        return array;
+    });
+}
