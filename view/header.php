@@ -34,15 +34,13 @@
       </div>
     </div>
 
-    <nav class="navbar topnav">
-      <!--Bootstrap hamburger menu--needs to be on left-->
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link" href="index.php">Home</a>
-        </li>
+    <nav class="navbar topnav navbar-expand-lg navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.php">Home</a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="nav nav-pills mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="index.php?action=diet">The Diet</a>
         </li>
