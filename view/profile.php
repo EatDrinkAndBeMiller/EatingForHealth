@@ -21,8 +21,7 @@
     </table>
 <br>
 <h2>Food Journal</h2>
-<a href="./index.php?action=view_journal">View Food Journal Entry</a><br>
-<a href="./index.php?action=add_journal">Add Food Journal Entry</a><br>
+<a href="./index.php?action=view_journal">View/Add Food Journal Entries</a><br>
 
 
 <?php include('footer2.php'); ?>
