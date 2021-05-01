@@ -61,7 +61,7 @@ class Recipe {
 
     public static function get_image($id) {
         $db = Database::getDB();
-        $query = 'SELECT recipe_image FROM recipe_images WHERE recipe_id = :id';
+        $query = 'SELECT * FROM recipe_images WHERE recipe_id = :id';
         $statement = $db->prepare($query);
         $statement->bindValue(':id', $id);
         $statement->execute();
