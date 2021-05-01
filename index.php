@@ -11,6 +11,9 @@
     $avoid = filter_input(INPUT_POST, 'avoid', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
     $username = trim(filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING));
     $password = trim(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING));
+    $food = trim(filter_input(INPUT_POST, 'food', FILTER_SANITIZE_STRING));
+    $comments = trim(filter_input(INPUT_POST, 'comments', FILTER_SANITIZE_STRING));
+    $jid = filter_input(INPUT_POST, 'delete_journal', FILTER_VALIDATE_INT);
 
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
     if (!$action) {
@@ -102,6 +105,26 @@
             $user = Member::get_id($_SESSION['userid']);
             Recipe::add_fav($id, $user);
             header("Location: .?action=list_recipe");
+            break;
+        case "profile":
+            $user = Member::get_id($_SESSION['userid']);
+            $info = Member::get_user($user);
+            $favorites = Member::get_favorites($user);
+            include('view/profile.php');
+            break;
+        case "view_journal":
+            $user = Member::get_id($_SESSION['userid']);
+            $entry = Member::get_journal($user);
+            include('view/journal.php');
+            break;
+        case "add_journal":
+            $user = Member::get_id($_SESSION['userid']);
+            Member::add_journal($user, $food, $comments);
+            header("Location: .?action=view_journal");
+            break;
+        case "delete_journal":
+            Member::delete_journal($jid);
+            header("Location: .?action=view_journal");
             break;
     }
     

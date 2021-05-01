@@ -84,7 +84,7 @@
                 $userid = $_SESSION['userid'];
         ?>
           <p>
-              Welcome <?= $userid ?>! (<a href=".?action=logout">Sign Out</a>)
+              Welcome <?= $userid ?>! <br><a href=".?action=profile">View Profile</a><a href=".?action=logout">Sign Out</a>
           </p>
         <?php } ?>
       </div>
