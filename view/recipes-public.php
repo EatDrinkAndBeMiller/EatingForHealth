@@ -1,28 +1,32 @@
 <?php include('header.php') ?>
 
 <h1 class="text-center">Recipe Links</h1><br>
-<div class="row">
-    <div class="col-md-6">
-        <h1 class="text-center dark-text" style="font-family: 'Kaushan Script', cursive;">
-            <u>Categories</u></h1><br>
-      <div class="row">
-        <div class="col-md-6">
-            <a href="#breakfast" class="h4">Breakfast</a><br>
-            <a href="#snacks-sides" class="h4">Snacks &amp; Sides</a><br>
-            <a href="#entrees" class="h4">Entrees</a>
-        </div>
-        <div class="col-4 col-sm-6">
-            <a href="#desserts" class="h4">Desserts</a><br>
-            <a href="#smoothies" class="h4">Smoothies</a><br>
-            <a href="#sauces-seasonings" class="h4">Sauces &amp; Seasonings</a>
+<div class="row justify-content-md-center">
+  <div class="col-md-11">
+    <div class="row">
+      <div class="col-md-6">
+          <h1 class="text-center dark-text" style="font-family: 'Kaushan Script', cursive;">
+              <u>Categories</u></h1><br>
+        <div class="row">
+          <div class="col-md-6">
+              <a href="#breakfast" class="h4">Breakfast</a><br>
+              <a href="#snacks-sides" class="h4">Snacks &amp; Sides</a><br>
+              <a href="#entrees" class="h4">Entrees</a>
+          </div>
+          <div class="col-4 col-sm-6">
+              <a href="#desserts" class="h4">Desserts</a><br>
+              <a href="#smoothies" class="h4">Smoothies</a><br>
+              <a href="#sauces-seasonings" class="h4">Sauces &amp; Seasonings</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-6 text-center">
-    <a href="about-membership.php"><img src="view/images/membership_recipes.png" alt="graphic for considering membership for additional recipes and searching"
-        width="100%">></a>
+      <div class="col-md-6 text-center">
+      <a href="about-membership.php"><img src="view/images/membership_recipes.png" alt="graphic for considering membership for additional recipes and searching"
+          width="100%">></a>
+      </div>
     </div>
   </div>
+</div>
 <br>
 
 <div class="card bg-light">

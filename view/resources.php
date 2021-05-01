@@ -3,29 +3,29 @@
 <br>
 <h1 class="text-center">Resources for Your Health</h1>
 <br>
+<div class="row justify-content-md-center">
+  <div class="col-md-11">
+    <div class="row">
+    <div class="col-md-7">
+      <img src="view/images/site-tour_open-slide.png" alt="placeholder for site tour video" width="100%">
+        <!-- iframe for tutorial video:
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+        </div> -->
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4 align-middle"><br><br>
+        <h4><u>Resources on this site&colon;</u></h4>
 
-<div class="row">
-<div class="col-md-7">
-  <b>Take a tour of the site&colon;</b>
-    <img src="view/images/site-tour_open-slide.png" alt="placeholder for site tour video" width="100%">
-      <!-- iframe for tutorial video:
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-      </div> -->
-  </div>
-
-  <div class="col-md-1"></div>
-
-  <div class="col-md-4 align-middle"><br><br>
-    <h4><u>Resources on this site&colon;</u></h4>
-
-      <ul class="text-left">
-        <li><a href="index.php?action=diet">Details about the Diet</a></li>
-        <li><a href="index.php?action=listrecipe">Recipe Links</a></li>
-        <li><a href="index.php?action=substitutes">Substitutes (Member Content)</a></li>
-        <li><a href="index.php?action=list_recipe">Exclusive Recipes (Member Content)</a></li>
-        <li><a href="index.php?action=weekplan">Weekly Planner (Member Content)</a></li>
-      </ul>
+          <ul class="text-left">
+            <li><a href="index.php?action=diet">Details about the Diet</a></li>
+            <li><a href="index.php?action=listrecipe">Recipe Links</a></li>
+            <li><a href="index.php?action=substitutes">Substitutes (Member Content)</a></li>
+            <li><a href="index.php?action=list_recipe">Exclusive Recipes (Member Content)</a></li>
+            <li><a href="index.php?action=weekplan">Weekly Planner (Member Content)</a></li>
+          </ul>
+      </div>
+    </div>
   </div>
 </div>
 <br>

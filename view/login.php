@@ -38,6 +38,13 @@
         </div>
     </div>
     </div>
+    <br>
+    <div class="row justify-content-md-center">
+        <div class="col-md-10">
+            <h4 class="text-center">Not a member? Find out about membership and register <a href=".?action=about-membership">
+                here</a>. </h4>
+        </div>
+    </div>
     </main>
 
 <?php include('footer.php')?>
