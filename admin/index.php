@@ -41,6 +41,8 @@
     $relationshipID = filter_input(INPUT_POST, 'delete_relationship', FILTER_VALIDATE_INT);
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    $first_name = filter_input(INPUT_POST, 'first', FILTER_SANITIZE_STRING);
+    $last_name = filter_input(INPUT_POST, 'last', FILTER_SANITIZE_STRING);
     $confirm_password = filter_input(INPUT_POST, 'confirm_password', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $admin = filter_input(INPUT_POST, 'admin', FILTER_VALIDATE_BOOLEAN);
@@ -111,7 +113,7 @@
             break;
         case "add_user":
             if (!Member::username_exists($username)) {
-                Member::add_user($username, $password, $email, $admin);
+                Member::add_user($username, $first_name, $last_name, $password, $email, $admin);
                 header("Location: .?action=list_recipe");
             } else {
                 $login_message = 'Username must be unique!';
