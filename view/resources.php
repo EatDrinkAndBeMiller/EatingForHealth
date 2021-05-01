@@ -69,7 +69,7 @@
     <img class="card-img-top" src="view/images/resources-pg/cleaning.png" 
         alt="bucket with cleaning supplies" height="200px">
     <div class="card-body">
-      <h5 class="card-title text-center text-white bg-dark align-bottom">Toxins&#47;Cleaning</h5>
+      <h5 class="card-title text-center text-white bg-dark align-bottom">Environmental Toxins</h5>
     </div></a>
   </div>
   <div class="card"><a href="https://www.newbeginningsfmc.com/blog" target="_blank">
