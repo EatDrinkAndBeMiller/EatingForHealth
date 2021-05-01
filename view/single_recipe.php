@@ -14,16 +14,13 @@ $img = Recipe::get_image($id);
     <div class="col-md-3">
       <div class="align-middle">
         <?php echo '<img src="images/recipes/' . $img['recipe_image'] . '">' ?><br>
-        <?php if($img['recipe_caption'] != '') { ?>
-            <small class="text-muted vertical-center"><?php echo $img['recipe_caption']?></small>
-        <?php } ?>
       </div>
     </div>
     <div class="col-md-7">
       <div class="card bg-light">
         <div class="card-body text-center">
           <p><b>Prep Time:</b><?php echo " ".$recipe['prep_time']." "; ?> &nbsp; | &nbsp;
-            <b>Cook or Fridge Time:</b><?php echo " ".$recipe['cook_time']." "; ?> &nbsp; | &nbsp;
+            <b>Cook or Fridge Time:</b><?php echo " ".$recipe['cook_time']." "; ?> &nbsp; | <br>
             <b>Total Time:</b><?php echo " ".$recipe['total_time']." "; ?>
         </div>
       </div>
@@ -72,6 +69,7 @@ $img = Recipe::get_image($id);
         <?php } ?>
 
         <p class="text-muted">Servings&colon; <?php echo $recipe['serving']; ?></p>
+        <small class="text-muted">Photo by: <?php echo $img['recipe_caption']?></small>
     </div>
   </div>
 
