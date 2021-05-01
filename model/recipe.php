@@ -584,4 +584,13 @@ class Recipe {
         $statement->execute();
         $statement->closeCursor();
 }
+    public static function add_fav($id, $user) {
+        $db = Database::getDB();
+        $query = 'INSERT INTO `user_favorites` (recipe_id, user_id) VALUES (:recipe_id, :user_id)';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':recipe_id', $id, PDO::PARAM_INT);
+        $statement->bindValue(':user_id', $user, PDO::PARAM_INT);
+        $statement->execute();
+        $statement->closeCursor();
+    }
 }

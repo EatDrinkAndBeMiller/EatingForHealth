@@ -47,6 +47,7 @@
         <th>Description</th>
         <th>Category</th>
         <th>Select</th>
+        <th>Favorite</th>
       </tr>
       <?php foreach ($recipe as $r) : ?>
       <tr>
@@ -54,9 +55,10 @@
         <td><?php echo (empty($r)) ? 'No Matching Recipes' : $r['description']; ?></td>
         <td><?php echo (empty($r)) ? 'No Matching Recipes' : $r['category']; ?></td>
         <form action="view/single_recipe.php?rid=<?php echo $r['recipe_id'] ?>" id="single_recipe" method="POST">
-        <td><input type="submit" name="view" value="View"></td>
+        <td><input type="submit" name="view" value="View"></td></form>
+        <form action="." id="favorite" method="POST">
+        <td><input type="submit" value="Add"><input type="hidden" name="action" value="favorite"><input type="hidden" name="rid" value="<?php echo $r['recipe_id'] ?>"></td></form>
       </tr>
-      </form>
       <?php endforeach; ?>  
     </table>
 

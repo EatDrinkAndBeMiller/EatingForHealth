@@ -97,5 +97,11 @@
             }
             include('view/recipes.php');
             break;
+        case "favorite":
+            $id = filter_input(INPUT_POST, 'rid', FILTER_VALIDATE_INT);
+            $user = Member::get_id($_SESSION['userid']);
+            Recipe::add_fav($id, $user);
+            header("Location: .?action=list_recipe");
+            break;
     }
     

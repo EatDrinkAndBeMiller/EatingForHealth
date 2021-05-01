@@ -38,6 +38,17 @@ class Member {
         return $users;
     }
 
+    public static function get_id($username) {
+        $db = Database::getDB();
+        $query = 'SELECT user_id FROM users WHERE username = :username';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':username', $username);
+        $statement->execute();
+        $users = $statement->fetch();
+        $statement->closeCursor();
+        return $users;
+    }
+
     public static function is_valid_user($username, $password) {
         $db = Database::getDB();
         $query = 'SELECT password FROM users WHERE username = :username';
