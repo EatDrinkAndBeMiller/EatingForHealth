@@ -33,21 +33,22 @@
                style="width:200px;"></a>
       </div>
     </div>
-
     <nav class="navbar topnav navbar-expand-lg navbar-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="index.php">Home</a>
+
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="nav nav-pills mr-auto">
-        <li class="nav-item">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item">
+          <a class="nav-link" href="index.php">Home</a>
+        </li>  
+      <li class="nav-item">
           <a class="nav-link" href="index.php?action=diet">The Diet</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?action=public_recipes">Recipe Links</a>
         </li>
-
         <?php if (isset($_SESSION['userid']) && $action !== 'logout') {  ?>
           <li class="nav-item">
             <a class="nav-link" href="index.php?action=substitutes">Substitutes</a>
@@ -74,7 +75,7 @@
           <a class="nav-link" href="index.php?action=resources">Resources</a>
         </li>
       </ul>
-      <div class="login text-right">
+      <div class="nav-item">
         <?php if (!isset($_SESSION['userid'])) { ?>
           <a href=".?action=about-membership">Register<!-- &#47;About Membership --></a> &nbsp; &nbsp;
           <a href=".?action=login">Log in</a> 
@@ -87,7 +88,9 @@
           </p>
         <?php } ?>
       </div>
-    </nav>
+  </div>
+</nav>
+    
 
 
 

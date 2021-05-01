@@ -9,10 +9,10 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="30000">
-        <a href="diet.php"><img src="view/images/welcome_carousel.png" class="d-block w-100" alt="slide to welcome users with link to the diet"></a>
+        <a href="index.php?action=diet"><img src="view/images/welcome_carousel.png" class="d-block w-100" alt="slide to welcome users with link to the diet"></a>
       </div>
       <div class="carousel-item" data-bs-interval="30000">
-        <a href="about-membership.php"><img src="view/images/membership_carousel.png" class="d-block w-100" alt="slide about benefits of membership with link to About Membership"></a>
+        <a href=".?action=about-membership"><img src="view/images/membership_carousel.png" class="d-block w-100" alt="slide about benefits of membership with link to About Membership"></a>
       </div>
       <div class="carousel-item" data-bs-interval="30000">
         <a href="https://www.newbeginningsfmc.com/about" target="_blank">
@@ -37,15 +37,15 @@
     <p class="text-left">This website is specifically designed to support those following Dr. Shannon&rsquo;s anti-inflammatory&#47;
         elimination diet. Here are some public resources for support&colon;</p>
     <ul class="text-left">
-      <li><a href="diet.php">The Diet</a> - details about what to eat and what not to eat</li>
-      <li><a href="recipes-public.php">Recipe Links</a> - links to recipes that fit either phases of the diet</li>
-      <li><a href="resources.php">Resources</a> - additional resources to support healthy living</li>
+      <li><a href="index.php?action=diet">The Diet</a> - details about what to eat and what not to eat</li>
+      <li><a href="index.php?action=public_recipes">Recipe Links</a> - links to recipes that fit either phases of the diet</li>
+      <li><a href="index.php?action=resources">Resources</a> - additional resources to support healthy living</li>
     </ul>
     <p class="text-left">To learn more about Dr. Shannon and New Beginnings Functional medicine, check out <a href="https://www.newbeginningsfmc.com/" target="_blank">
         www.newbeginningsfmc.com</a>. Learn more about a free 15 minute consultation about your health concerns and needs.</p>
   </div>
   <div class="col-lg-6 text-left">
-    <a href="about-membership.php">
+    <a href=".?action=about-membership">
     <img src="view/images/tile_membership.png" alt="information about becoming a member, click here" width="100%"></a>
   </div>
 </div>
@@ -73,7 +73,7 @@
           <div class="card-body">
             <h5 class="card-title">Chia Pudding</h5>
             <p class="card-text">Free of dairy, gluten, eggs, sugar, nuts, coconut, oats, and shellfish</p>
-            <p class="card-text"><a href="about-membership.php">Recipe in membership account</a></p>
+            <p class="card-text"><a href=".?action=about-membership">Recipe in membership account</a></p>
             <p class="card-text"><small class="text-muted">Photo: The WorkTop</small></p>
           </div>
         </div>
@@ -124,7 +124,7 @@
           <div class="card-body">
             <h5 class="card-title">Dairy-Free Vanilla or Chocolate Ice-Cream</h5>
             <p class="card-text">Free of dairy, gluten, eggs, sugar, coconut, oats, and shellfish</p>
-            <p class="card-text"><a href="about-membership.php">Recipe in membership account</a></p>
+            <p class="card-text"><a href=".?action=about-membership">Recipe in membership account</a></p>
             <p class="card-text"><small class="text-muted">Photo: Fresh Simple Home</small></p>
           </div>
         </div>
