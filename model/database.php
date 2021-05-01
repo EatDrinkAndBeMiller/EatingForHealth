@@ -3,7 +3,7 @@
 class Database {
     private static $dsn = 'mysql:host=localhost;dbname=eating4health';
     private static $username = 'newuser';
-    private static $password = 'Eating4Health13!';
+    private static $password = '';
     private static $db;
 
     private function __construct() {}
