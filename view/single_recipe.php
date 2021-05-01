@@ -28,16 +28,25 @@ $img = Recipe::get_image($id);
         </div>
       </div>
       <h4>Ingredients</h4>
+        <ul>
+          <?php foreach($ingredients as $i) : ?> 
+          <li>
+            <?php $formatted = $i["measurement_qty"]." ".$i["measurement"]." ".$i["ingredient_name"]; 
+              echo $formatted; ?><br>
+            <?php endforeach; ?></li>
+        </ul>
+
+        <!-- formatting for checkboxes to allow for adding to a shopping list
         <form class="shopping-list" method="post">
         <div class="form-check">
-          <?php foreach($ingredients as $i) : ?> 
-            <input class="form-check-input" type="checkbox" name="ingredient" value="<?php echo $i['ingredient_name']?>">
-              <?php $formatted = $i["measurement_qty"]." ".$i["measurement"]." ".$i["ingredient_name"]; 
-                echo $formatted; ?><br>
-            <?php endforeach; ?>
+          // foreach($ingredients as $i) : ?> 
+            <input class="form-check-input" type="checkbox" name="ingredient" value="<?php //echo $i['ingredient_name']?>">
+              <?php //$formatted = $i["measurement_qty"]." ".$i["measurement"]." ".$i["ingredient_name"]; 
+                //echo $formatted; ?><br>
+            <?php //endforeach; ?>
             <button class="btn btn-primary" type="submit" onclick="shoppingLists()">Add Ingredients to Shopping List</button>
         </div>
-        </form>
+        </form> -->
     </div>
   </div>
 
