@@ -6,12 +6,14 @@ class Member {
 
     private function __construct() {}
 
-    public static function add_user($username, $password, $email, $admin) {
+    public static function add_user($username, $first_name, $last_name, $password, $email, $admin) {
         $db = Database::getDB();
         $hash = password_hash($password, PASSWORD_DEFAULT);
-        $query = 'INSERT INTO users (username, password, email, admin) VALUES (:username, :password, :email, :admin)';
+        $query = 'INSERT INTO users (username, first_name, last_name, password, email, admin) VALUES (:username, :first, :last, :password, :email, :admin)';
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $username);
+        $statement->bindValue(':first', $first_name);
+        $statement->bindValue(':last', $last_name);
         $statement->bindValue(':password', $hash);
         $statement->bindValue(':email', $email);
         $statement->bindValue(':admin', $admin);

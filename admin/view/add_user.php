@@ -14,6 +14,14 @@
   <input type="text" name="username" class="form-control" aria-label="Model" aria-describedby="inputGroup-sizing-default">
 </div><br>
 <div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
+  <input type="text" name="first" class="form-control" aria-label="Model" aria-describedby="inputGroup-sizing-default">
+</div><br>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Last Name</span>
+  <input type="text" name="last" class="form-control" aria-label="Model" aria-describedby="inputGroup-sizing-default">
+</div><br>
+<div class="input-group mb-3">
   <span class="input-group-text" id="inputGroup-sizing-default">Email Address</span>
   <input type="email" name="email" class="form-control" aria-label="Year" aria-describedby="inputGroup-sizing-default">
 </div>
