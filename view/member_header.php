@@ -69,8 +69,11 @@
       </div>
       <div class="nav-item">       
         <ul class="navbar-nav">  
-
-          <li><a href=".?action=logout">Sign Out</a></li>
+          <li style="color: #072968" class="hide-sm">
+            <a class="dropdown-item" href=".?action=profile">
+              <?php $userid = $_SESSION['userid']; ?>
+              Welcome, <?= $userid ?> </a>
+          </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href=".?action=profile" role="button" aria-haspopup="true" aria-expanded="false">
                 Profile</a>
@@ -78,17 +81,11 @@
                   <a class="dropdown-item" href=".?action=profile">View Profile</a>
                   <a class="dropdown-item" href=".?action=profile">Favorites</a>
                   <a class="dropdown-item" href="index.php?action=view_journal">Food Journal</a>
+                  <a href=".?action=logout">Sign Out</a>
                 </div>
             </li>
-            <li style="color: #072968" class="hide-sm">
-            <?php $userid = $_SESSION['userid']; ?>
-                Welcome, <?= $userid ?> 
-            </li>
-            <!-- <a href=".?action=profile">View Profile</a> -->
-            
-          <!--   <li>
-              <a href=".?action=logout">Sign Out</a>
-            </li> -->
           </ul>
       </div>
     </nav>
+
+<!--when updating this, update header.php as well!!!-->

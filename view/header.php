@@ -33,46 +33,87 @@
                style="width:200px;"></a>
       </div>
     </div>
-    <nav class="navbar topnav navbar-expand-lg navbar-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-    <li class="nav-item">
-          <a class="nav-link" href="index.php">Home</a>
-        </li>  
+<!--non-member menu bar-->
+  <nav class="navbar topnav navbar-expand-lg navbar-dark">
+    <?php if (!isset($_SESSION['userid'])) { ?>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-          <a class="nav-link" href="index.php?action=diet">The Diet</a>
-        </li>
+            <a class="nav-link" href="index.php">Home</a>
+          </li>  
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=public_recipes">Recipe Links</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
-              Member Content</a>
-          <div class="dropdown-menu topnav-dropdown">
+            <a class="nav-link" href="index.php?action=diet">The Diet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?action=public_recipes">Recipe Links</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?action=resources">Resources</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
+                Member Content</a>
+            <div class="dropdown-menu topnav-dropdown">
               <a class="dropdown-item" href="index.php?action=substitutes">Substitutes</a>
-              <a class="dropdown-item" href="index.php?action=list_recipe">All Recipes</a>
+              <a class="dropdown-item" href="index.php?action=list_recipe">All Recipes &#40;searchable&#41;</a>
               <a class="dropdown-item" href="index.php?action=weekplan">Sample Week Plan</a>
+              <a class="dropdown-item" href="index.php?action=profile">Favorites</a>
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.php?action=resources">Resources</a>
-        </li>
+        </li> -->
       </ul>
       </div>
       <div class="nav-item">
-        <?php if (!isset($_SESSION['userid'])) { ?>
           <a href=".?action=about-membership">Register</a> &nbsp; &nbsp;
           <a href=".?action=login">Log in</a> 
-            
+      </div>
+
+      <!--member menu bar-->
         <?php } else if (isset($_SESSION['userid']) && $action !== 'logout') { 
                 $userid = $_SESSION['userid'];
-        ?>     
+        ?>    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?action=diet">The Diet</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
+                Recipes</a>
+            <div class="dropdown-menu topnav-dropdown">
+              <a class="dropdown-item" href="index.php?action=list_recipe">All Recipes</a>
+              <a class="nav-link" href="index.php?action=public_recipes">Public Recipe Links</a>
+              <a class="dropdown-item" href="index.php?action=profile">Favorites</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php?action=resources" role="button" aria-haspopup="true" aria-expanded="false">
+            Diet Resources</a>
+            <div class="dropdown-menu topnav-dropdown">
+                <a class="dropdown-item" href="index.php?action=substitutes">Substitutes</a>
+                <a class="dropdown-item" href="index.php?action=weekplan">Sample Week Plan</a>
+                <a class="dropdown-item" href="index.php?action=resources">Resources/Education</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-item">       
         <ul class="navbar-nav">  
-          <li><a href=".?action=logout">Sign Out</a></li>
+          <li style="color: #072968" class="hide-sm">
+            <a class="dropdown-item" href=".?action=profile">
+              <?php $userid = $_SESSION['userid']; ?>
+              Welcome, <?= $userid ?> </a>
+          </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href=".?action=profile" role="button" aria-haspopup="true" aria-expanded="false">
                 Profile</a>
@@ -80,16 +121,13 @@
                   <a class="dropdown-item" href=".?action=profile">View Profile</a>
                   <a class="dropdown-item" href=".?action=profile">Favorites</a>
                   <a class="dropdown-item" href="index.php?action=view_journal">Food Journal</a>
+                  <a href=".?action=logout">Sign Out</a>
                 </div>
             </li>
-            <li style="color: #072968" class="hide-sm">
-            <?php $userid = $_SESSION['userid']; ?>
-                Welcome, <?= $userid ?> 
-            </li>
           </ul>
-        <?php } ?>
       </div>
-
+    </nav>
+  <?php } ?>
 </nav>
 
 

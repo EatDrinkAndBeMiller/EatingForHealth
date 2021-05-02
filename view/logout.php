@@ -1,6 +1,8 @@
 <?php 
     include('header.php'); 
     
+    $username = $_SESSION['userid'];
+
     //unset variable(s)
     /* if (isset($_SESSION['userid'])) { */
         //$firstname = $_SESSION['userid'];
@@ -20,6 +22,6 @@
 <br>
 <h1 class="thank_you">Thank you for signing out, <?= $username ?>.</h1>
 <br>
-<p><a href=".">Click here</a> to return to the webpage.</p>
+<p><a href=".">Click here</a> to return to the hompage.</p>
 <br>
 <?php include('footer.php'); ?>

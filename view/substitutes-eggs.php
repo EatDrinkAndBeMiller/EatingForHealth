@@ -1,4 +1,4 @@
-<?php include('header.php')?>
+<?php include('member_header.php')?>
  
   <h3 class="text-center"><b><u>Egg Substitutions</u></b></h3>
   <br>

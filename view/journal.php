@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('member_header.php'); ?>
 <h1 class="text-center">Food Journal</h1>
 <div class="container-fluid" >
 <div>

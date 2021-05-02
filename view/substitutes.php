@@ -1,4 +1,4 @@
-<?php include('header.php')?>
+<?php include('member_header.php')?>
     
   <h1 class="dark-text text-center">Substitute Information</h1><br>
 

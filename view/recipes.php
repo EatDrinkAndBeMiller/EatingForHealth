@@ -1,4 +1,4 @@
-<?php include('header.php')?>
+<?php include('member_header.php')?>
 <br>
 <div class="row justify-content-md-center">
   <div id="list" class="col list">

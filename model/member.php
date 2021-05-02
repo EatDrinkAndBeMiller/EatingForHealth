@@ -64,9 +64,11 @@ class Member {
 
     public static function get_favorites($user) {
         $db = Database::getDB();
-        $query = 'SELECT user_favorites.recipe_id, recipe.recipe_name
+        $query = 'SELECT user_favorites.recipe_id, recipe.recipe_name, recipe.category
         FROM user_favorites
-        INNER JOIN recipe ON recipe.recipe_id=user_favorites.recipe_id WHERE user_favorites.user_id = :id;';
+        INNER JOIN recipe ON recipe.recipe_id=user_favorites.recipe_id 
+        WHERE user_favorites.user_id = :id;
+        ORDER BY recipe.category';
         $statement = $db->prepare($query);
         $statement->bindValue(':id', $user);
         $statement->execute();
