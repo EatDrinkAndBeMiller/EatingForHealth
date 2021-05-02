@@ -23,7 +23,7 @@
   
 <body>
   <div class="container">
-    <div class="row logos">
+    <div class="row logos text-center">
       <div class="col-sm">
         <a href="../index.php">
           <img src="../view/images/E4H_logo_dark.jpg" class="text-left" alt="Logo for Eating 4 Health" 
