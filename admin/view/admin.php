@@ -4,6 +4,14 @@
   <br>
 <div class="row justify-content-md-center">
   <div class="col-lg-11">
+    <a href="./index.php?action=add_recipe">Add Recipe</a><br>
+    <a href="./index.php?action=add_ingredient">Add Ingredient</a><br>
+    <a href="./index.php?action=add_image">Add Recipe Image</a><br>
+    <a href="./index.php?action=add_relationship">Add Relationship</a><br>
+    <a href="./index.php?action=user">Add User</a><br>
+<br>
+
+<h4 class="text-center">Current Recipes</h4>
   <div class="table-responsive">
     <table id="publictable">
       <tr>
@@ -32,15 +40,8 @@
       <?php endforeach; ?>  
     </table>
   </div>
-
-    <br>
-    <a href="./index.php?action=add_recipe">Add Recipe</a><br>
-    <a href="./index.php?action=add_ingredient">Add Ingredient</a><br>
-    <a href="./index.php?action=add_image">Add Recipe Image</a><br>
-    <a href="./index.php?action=add_relationship">Add Relationship</a><br>
-    <a href="./index.php?action=user">Add User</a><br>
   </div>
 </div>
-<br>
+<br><br>
 
 <?php include('footer_admin.php'); ?>
