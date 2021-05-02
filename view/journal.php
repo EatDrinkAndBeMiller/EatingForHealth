@@ -1,27 +1,27 @@
 <?php include('member_header.php'); ?>
 <h1 class="text-center">Food Journal</h1>
-<div class="container-fluid" >
-<div>
-<section id="list" class="list">
-    <header class="list row list header">
-    <form action="." method="post" id="list" class="list_header_select">
-    <input type="hidden" name="action" value="add_journal">
-<div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-lg">Food</span>
-  <input type="text" name="food" class="form-control" aria-label="Food" aria-describedby="inputGroup-sizing-default">
-</div><br>
-<div class="input-group input-group-lg">
-  <span class="input-group-text" id="inputGroup-sizing-default">Comments</span>
-  <input type="text" name="comments" class="form-control" rows="6" aria-label="Comments">
-</div><br>
-<button class="add-button bold" id="add_user">Add Journal Entry</button>
-    </form>
-    </header>
-    </div><br><br>
 
-    
-<div class="table-responsive-sm">
-<table class="table text-center" id="publictable">
+<div class="container-fluid" >
+  <div id="list" class="list">
+      <header class="list row list header">
+      <form action="." method="post" id="list" class="list_header_select">
+      <input type="hidden" name="action" value="add_journal">
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Food</span>
+    <input type="text" name="food" class="form-control" aria-label="Food" aria-describedby="inputGroup-sizing-default">
+  </div><br>
+  <div class="input-group input-group-lg">
+    <span class="input-group-text" id="inputGroup-sizing-default">Comments</span>
+    <input type="text" name="comments" class="form-control" rows="6" aria-label="Comments">
+  </div><br>
+  <button class="add-button bold" id="add_user">Add Journal Entry</button>
+      </form>
+      </header>
+      </div><br><br>
+
+      
+  <div class="table-responsive-sm">
+    <table class="table text-center" id="publictable">
       <tr>
         <th>Date</th>
         <th>Food</th>
@@ -42,5 +42,5 @@
       </tr>
       <?php endforeach; ?>  
     </table>
-</div>
+  </div>
 <?php include('footer2.php'); ?>
