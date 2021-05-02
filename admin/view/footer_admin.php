@@ -2,7 +2,7 @@
 <footer class="bg-light text-center"><br>
   <div class="row">
     <div class="col">
-      <img src="view/images/NBFM_logo_clear.png" class="text-end" alt="New Beginnings Functional Medicine logo" style="width:200px;"> <br>
+      <img src="../view/images/NBFM_logo_clear.png" class="text-end" alt="New Beginnings Functional Medicine logo" style="width:200px;"> <br>
         Dr. Shannon Evans, DO, IFMCP <br>
         Fort Collins, CO <br>
       <a href="tel:+9703050101">Tel: 970-305-0101</a><br>
@@ -10,7 +10,7 @@
     </div>
     <div class="col order-5">
       Website created by: <br>
-      <img src="view/images/4studentslogo.png" class="text-end" alt="4 Students & a Website" style="width:100px;"> <br>
+      <img src="../view/images/4studentslogo.png" class="text-end" alt="4 Students & a Website" style="width:100px;"> <br>
       <a href="https://ehmiller27.wixsite.com/elizabethmiller" target="_blank">Elizabeth Miller</a> <br>
       <a href="https://www.linkedin.com/in/mark-ross-5a0070156" target="_blank">Mark Ross <br>
       <a href="https://www.linkedin.com/in/tyler-follett" target="_blank">Tyler Follett <br>

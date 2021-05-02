@@ -1,4 +1,4 @@
-<?php include('header.php')?>
+<?php include('member_header.php')?>
 
 <br><h1 class="text-center">Sample Week Meal Plan</h1><br>
 

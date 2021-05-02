@@ -58,6 +58,9 @@
       .nbfm-logo {
         display: none;
       }
+      .hide-sm {
+        display: none;
+      }
     }
   
     /* Add a black background color to the top navigation */

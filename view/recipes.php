@@ -61,7 +61,7 @@
 
   <div class="row">
     <?php foreach ($recipe as $r) : ?>
-      <?php if (empty($r)) { ?> 
+      <?php if (empty($r['recipe_id'])) { ?> 
         <h4 class="text-center">Sorry, there are no Matching Recipes</h4>
       <?php } else { ?>
     <div class="col-sm-6">

@@ -1,7 +1,7 @@
 <?php include('header.php')?>
   
 <div class="row justify-content-md-center">
-  <div class="col-md-11">
+  <div class="col-md-11"> 
     <h3 class="text-center"><b><u>Sugar Substitutes - Alternative Sweeteners</u></b></h3><br>
     <p style="text-align:left"><b>Note:</b> In phase 1, all sweeteners, including sugar, are eliminated. In phase 2, you will work with Dr. Shannon to introduce or reintroduce some of these sweeteners into your diet.<br><br>
     <b><u>Fruit</u></b><br>

@@ -1,3 +1,6 @@
+<?php
+    require_once('util/valid_admin.php');
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,8 +12,8 @@
     <link rel="icon" href="view/images/logo.png" type="image/png">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="view/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="view/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../view/css/main.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
     </style>
@@ -23,13 +26,13 @@
     <div class="row logos">
       <div class="col-sm">
         <a href="index.php">
-          <img src="view/images/E4H_logo_dark.jpg" class="text-left" alt="Logo for Eating 4 Health" 
+          <img src="../view/images/E4H_logo_dark.jpg" class="text-left" alt="Logo for Eating 4 Health" 
             style="width:150px;"></a>
       </div>
       <div class="col-sm"></div>
         <div class="col-sm nbfm-logo">
         <a href="https://www.newbeginningsfmc.com/" target="_blank">
-          <img src="view/images/NBFM_logo.png" class="text-end" alt="New Beginnings Functional Medicine logo" 
+          <img src="../view/images/NBFM_logo.png" class="text-end" alt="New Beginnings Functional Medicine logo" 
                style="width:200px;"></a>
       </div>
     </div>
@@ -49,47 +52,46 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php?action=public_recipes">Recipe Links</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
-              Member Content</a>
-          <div class="dropdown-menu topnav-dropdown">
-              <a class="dropdown-item" href="index.php?action=substitutes">Substitutes</a>
-              <a class="dropdown-item" href="index.php?action=list_recipe">All Recipes</a>
-              <a class="dropdown-item" href="index.php?action=weekplan">Sample Week Plan</a>
-          </div>
-        </li>
+        <?php if (isset($_SESSION['userid']) && $action !== 'logout') {  ?>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?action=substitutes">Substitutes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?action=list_recipe">All Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?action=weekplan">Sample Week Plan</a>
+          </li>
+        <?php } else { ?>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php" role="button" aria-haspopup="true" aria-expanded="false">
+                Member Content</a>
+            <div class="dropdown-menu topnav-dropdown">
+                <a class="dropdown-item" href="index.php?action=substitutes">Substitutes</a>
+                <a class="dropdown-item" href="index.php?action=list_recipe">All Recipes</a>
+                <a class="dropdown-item" href="index.php?action=weekplan">Sample Week Plan</a>
+            </div>
+          </li>
+        <?php } ?>
+
         <li class="nav-item">
           <a class="nav-link" href="index.php?action=resources">Resources</a>
         </li>
       </ul>
-      </div>
       <div class="nav-item">
         <?php if (!isset($_SESSION['userid'])) { ?>
-          <a href=".?action=about-membership">Register</a> &nbsp; &nbsp;
+          <a href=".?action=about-membership">Register<!-- &#47;About Membership --></a> &nbsp; &nbsp;
           <a href=".?action=login">Log in</a> 
             
         <?php } else if (isset($_SESSION['userid']) && $action !== 'logout') { 
                 $userid = $_SESSION['userid'];
-        ?>     
-        <ul class="navbar-nav">  
-          <li><a href=".?action=logout">Sign Out</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href=".?action=profile" role="button" aria-haspopup="true" aria-expanded="false">
-                Profile</a>
-                <div class="dropdown-menu topnav-dropdown">
-                  <a class="dropdown-item" href=".?action=profile">View Profile</a>
-                  <a class="dropdown-item" href=".?action=profile">Favorites</a>
-                  <a class="dropdown-item" href="index.php?action=view_journal">Food Journal</a>
-                </div>
-            </li>
-            <li style="color: #072968" class="hide-sm">
-            <?php $userid = $_SESSION['userid']; ?>
-                Welcome, <?= $userid ?> 
-            </li>
-          </ul>
+        ?>
+          <p>
+              Welcome <?= $userid ?>! <br><a href=".?action=profile">View Profile</a><a href=".?action=logout">Sign Out</a>
+          </p>
         <?php } ?>
       </div>
-
+  </div>
 </nav>
 
 

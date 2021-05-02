@@ -2,7 +2,7 @@
 
 <h1 class="text-center">The Diet</h1>
 
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center"> 
   <div class="col-md-11">
     <h4><u>Phase 1</u></h4>
     <p>For 30 days, you will avoid the foods listed on your food sensitivity test AND the following foods&colon;</p>

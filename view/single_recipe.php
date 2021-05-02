@@ -10,7 +10,7 @@ $img = Recipe::get_image($id);
 
 <main>
 <br>
-<a href=".?action=list_recipe">Return to recipe list</a>
+<a href="../.?action=list_recipe">Return to recipe list</a>
 <br>
 <br><h1 style="text-align: center;"><?php echo $recipe['recipe_name']; ?></h1><br>
   <div class="row justify-content-md-center">
@@ -76,7 +76,7 @@ $img = Recipe::get_image($id);
     </div>
   </div>
   <br>
-<a href=".?action=list_recipe">Return to recipe list</a>
+<a href="../.?action=list_recipe">Return to recipe list</a>
 <br>
 </main><br>
 <?php include('footer2.php'); ?>

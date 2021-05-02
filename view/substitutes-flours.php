@@ -1,6 +1,6 @@
 <?php include('header.php')?>
   
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center"> 
   <div class="col-md-11">
       <h3 class="text-center"><b><u>Substituting Flour</u></b></h3><br>
         <p style="text-align:left">Although the grocery store sells gluten-free flours that can replace all-purpose and wheat flours, many times these replacement flours contain ingredients that can spike your blood sugar (like starches) or ingredients that you can’t have due to the first phase or to food sensitivities.<br><br> 

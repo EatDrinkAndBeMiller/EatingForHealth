@@ -1,7 +1,7 @@
 <?php include('header.php') ?>
 
 <h1 class="text-center">Recipe Links</h1><br>
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center"> 
   <div class="col-md-11">
     <div class="row">
       <div class="col-md-6">

@@ -28,7 +28,8 @@ class Recipe {
         $db = Database::getDB();
         $query = 'SELECT r.*, i.* FROM recipe r
                     JOIN recipe_images i 
-                    ON r.recipe_id=i.recipe_id';
+                    ON r.recipe_id=i.recipe_id
+                    ORDER BY r.category_id';
         $statement = $db->prepare($query);
         $statement->execute();
         $recipes = $statement->fetchAll();

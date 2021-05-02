@@ -4,7 +4,7 @@
 <h1 class="text-center">Resources for Your Health</h1>
 <br>
 <div class="row justify-content-md-center">
-  <div class="col-md-11">
+  <div class="col-md-11"> 
     <div class="row">
     <div class="col-md-7">
       <img src="view/images/site-tour_open-slide.png" alt="placeholder for site tour video" width="100%">
