@@ -9,6 +9,9 @@ $img = Recipe::get_image($id);
 ?>
 
 <main>
+<br>
+<a href=".?action=list_recipe">Return to recipe list</a>
+<br>
 <br><h1 style="text-align: center;"><?php echo $recipe['recipe_name']; ?></h1><br>
   <div class="row justify-content-md-center">
     <div class="col-md-3">
@@ -72,6 +75,8 @@ $img = Recipe::get_image($id);
         <small class="text-muted">Photo by: <?php echo $img['recipe_caption']?></small>
     </div>
   </div>
-
-</main><br><br><br>
+  <br>
+<a href=".?action=list_recipe">Return to recipe list</a>
+<br>
+</main><br>
 <?php include('footer2.php'); ?>
