@@ -1,4 +1,4 @@
-<?php include('member_header.php') ?>
+<?php include('header.php') ?>
 
 <h1 class="text-center">Recipe Links</h1><br>
 <div class="row justify-content-md-center"> 
