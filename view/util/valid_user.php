@@ -1,5 +1,6 @@
 <?php 
-    //make sure the user is logged in as a valid admin
+    //make sure the user is logged in as a valid user
     if (!isset($_SESSION['userid'])) {
-        header("Location: .?action=welcome");
+        $login_message = 'You must log to view this page!';
+        header("Location: .?action=login");
     }
