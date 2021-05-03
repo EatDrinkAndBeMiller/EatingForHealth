@@ -1,4 +1,4 @@
-<?php include('member_header.php'); ?>
+<?php include('header2.php'); ?>
 <?php require('../model/database.php'); ?>
 <?php require('../model/recipe.php'); ?>
 
