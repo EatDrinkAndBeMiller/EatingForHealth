@@ -95,9 +95,9 @@
         case "list_recipe_options":
             if (!$avoid) {
                 $recipe = Recipe::get_recipe_by_category($meal);
-            } else if (!$meal) {
+            } /* else if (!$meal) {
                 $recipe = Recipe::get_recipe_by_category($meal);
-            } else {
+            } */ else {
                 $recipe = Recipe::get_all_selected_recipes($avoid, $meal);
             }
             include('view/recipes.php');
