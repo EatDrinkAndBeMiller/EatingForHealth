@@ -4,6 +4,9 @@
   <div id="list" class="col list">
     <div class="card bg-light">
       <div class="card-body list header">
+        <div class="row text-center">
+          <div class="col"><h5>To search the allergens you are avoiding, please choose a category.</h5></div>
+        </div>
         <form action="." method="post" id="list" class="list_header_select">
           <input type="hidden" name="action" value="list_recipe_options">
           <div class="row">
@@ -48,11 +51,16 @@
               <label class="form-check-label" for="inlineCheckbox2">Nuts</label>
             </div>
           </div>
-          <div class="col-lg-1 col">
-            <button class="add-button bold btn btn-primary" id="user">Search</button><br>
+          <div class="col-lg-1 col text-center">
+            <button class="add-button bold btn btn-primary justify-content-md-center" id="user">Search</button><br>
           </div>
           </div>
         </form>
+        <?php if ($meal_message) { ?>
+          <div class="row text-center">
+            <div class="col" style="color: #ff0000;"><p><?php echo $meal_message?></p></div>
+          </div>
+        <?php } ?>
       </div>
       </div>
     </div>
@@ -60,12 +68,16 @@
   <br>
 
   <div class="row">
-    <?php foreach ($recipe as $r) : ?>
-      <?php if (empty($r['recipe_id'])) { ?> 
-        <h4 class="text-center">Sorry, there are no Matching Recipes</h4>
-      <?php } else { ?>
-    <div class="col-sm-6">
-      <div class="card mb-3" style="max-width: 540px;">
+    <?php if (empty($recipe)) { ?> 
+      <div class="row justify-content-md-center">
+        <div class="col text-center">
+          <h4>Sorry, there are no Matching Recipes</h4>
+        </div>
+      </div>
+    <?php } else { ?>
+      <?php foreach ($recipe as $r) : ?>
+      <div class="col-sm-6">
+        <div class="card mb-3" style="max-width: 540px;">
           <div class="row no-gutters">
               <div class="col-4">
                 <a href="view/single_recipe.php?rid=<?php echo $r['recipe_id'] ?>">
@@ -87,10 +99,9 @@
                   </div>
               </div>
           </div>
+        </div>
       </div>
-    </div>
-  <?php } ?>
-  <?php endforeach; ?>
+    <?php endforeach; } ?>
   </div>
 
     <!-- <table id="publictable">
