@@ -19,20 +19,30 @@
                 <li>Access sample weekly meal plans</li>
                 <li>Log food and reactions for phase 2 as you reintroduce foods</li>
                 <li>Save your favorite recipes</li>
-                <li>Create shopping lists for ingredients as you meal plan</li>
+                <li>Create shopping lists for ingredients as you meal plan <i>&#40;coming soon&#41;</i></li>
             </ul>
         </div>
     </div>
 </div>
     <br>
 
-<div class="row justify-content-md-center">
+    <div class="card bg-light">
+      <div class="card-body list header">
+        <div class="row text-center"><br>
+        <h2>Registration is Coming Soon</h2>
+        <h5>Please enjoy the public site</h5>
+        <h5><a href=".">Home</a></h5>
+        <br>
+        </div>
+      </div>
+    </div><br>
+<!-- <div class="row justify-content-md-center">
     <div class="col-lg-8">
         <div class="card bg-light"><br>
             <h3 class="text-center">Register</h3><br>
-            <form action="." method="POST" class="text-center">
+            <form action="." method="POST" class="text-center">-->
             <!--double-check action and inputs-->
-                <input type="hidden" name="action" value="register">   
+                <!--<input type="hidden" name="action" value="register">   
                 <div class="form-group row">
                     <label for="firstName" class="col-sm-3 col-form-label">First Name</label>
                     <div class="col-sm-8">
@@ -67,6 +77,6 @@
             </form><br><br>
         </div>
     </div>
-</div>
+</div> -->
 
 <?php include('footer.php')?>
