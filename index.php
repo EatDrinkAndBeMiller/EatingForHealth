@@ -1,11 +1,19 @@
 <?php
-    $lifetime = 60 * 60 * 24 * 7; //one week
+
+use PHPMailer\PHPMailer\PHPMailer;
+
+$lifetime = 60 * 60 * 24 * 7; //one week
     session_set_cookie_params($lifetime, '/');
     session_start();
 
     require('model/database.php');
     require('model/recipe.php');
     require('model/member.php');
+    require('model/reset.php');
+    require('PHPMailer/src/PHPMailer.php');
+    require('PHPMailer/src/SMTP.php');
+    require('PHPMailer/src/POP3.php');
+    require('PHPMailer/src/Exception.php');
 
     $meal = filter_input(INPUT_POST, 'meal', FILTER_VALIDATE_INT);
     $avoid = filter_input(INPUT_POST, 'avoid', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
@@ -129,5 +137,67 @@
             Member::delete_journal($jid);
             header("Location: .?action=view_journal");
             break;
+        case "reset_password":
+            include('view/reset_password.php');
+            break;
+        case "reset_password_now":
+            $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+            $selector = bin2hex(random_bytes(8));
+            $token = random_bytes(32);
+            $expires = date("U") + 1800;
+            Reset::clearToken($email);
+            Reset::setToken($email, $token, $selector, $expires);
+            $url = "https://eating4health.org/index.php?action=enter_new_password&selector=" . $selector . "&validator=" . bin2hex($token);
+            $mail = new PHPMailer();
+            $mail->isSMTP();
+            $mail->Host = '';
+            $mail->SMTPSecure = 'tls';
+            $mail->Port = '587';
+            $mail->SMTPAuth = true;
+            $mail->Username = '';
+            $mail->Password = '';
+            $mail->setFrom = 'info@eating4health.org';
+            $mail->addAddress = $email;
+            $mail->Subject = 'Reset your password for Eating4Health';
+            $mail->Body = '<p>We received a password reset request. Click the link below to reset your password. If you did not make this request, you can ignore this email</p>';
+            $mail->Body .= '<p>Here is your password reset link: </br>';
+            $mail->Body .= '<a href="' . $url . '">' . $url . '</a></p>';
+            $mail->isHTML(true);
+            if($mail->send()) {
+                $_SESSION['reset'] = "success";
+            } else {
+                echo "<p>Message could not be sent!</p>";
+                echo "<p>Error: " . $mail->ErrorInfo . '</p>';
+            }
+            header("Location: .?action=reset_password");
+            break;
+        case "enter_new_password":
+            $selector = filter_input(INPUT_GET, 'selector', FILTER_SANITIZE_STRING);
+            $validator = filter_input(INPUT_GET, 'validator', FILTER_SANITIZE_STRING);
+            include('view/create-new-password.php');
+            break;
+        case "set_password":
+            $selector = filter_input(INPUT_GET, 'selector', FILTER_SANITIZE_STRING);
+            $validator = filter_input(INPUT_GET, 'validator', FILTER_SANITIZE_STRING);
+            $currentDate = date("U");
+            $result = Reset::checkToken($currentDate, $selector);
+            $tokenBin = hex2bin($validator);
+            $tokenCheck = password_verify($tokenBin, $result['pwdResetToken']);
+            if ($tokenCheck == true) {
+                $pw = filter_input(INPUT_POST, 'pwd_repeat', FILTER_SANITIZE_STRING);
+                Member::updatePWD($email, $pw);
+                header("Location: .?action=login");
+                break;
+            } elseif ($tokenCheck == false) {
+                echo "There was error validating your request";
+                header("Location: .?action=reset_password");
+                break;
+            }
+
+        
+
+
+        
+
     }
     
