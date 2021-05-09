@@ -52,28 +52,33 @@ $img = Recipe::get_image($id);
 
   <div class="row justify-content-md-center">
     <div class="col-md-10">
-        <h4 class="text-left">Directions</h4>
-            <ol>
-                <li><?php if($recipe['step_a'] != '') { echo $recipe['step_a']; } ?></li>
-                <?php if($recipe['step_b'] != '') { ?>
-                    <li><?php echo $recipe['step_b']; ?></li>
-                <?php } ?>
-                <?php if($recipe['step_c'] != '') { ?>
-                    <li><?php echo $recipe['step_c']; ?></li>
-                <?php } ?>
-                <?php if($recipe['step_d'] != '') { ?>
-                    <li><?php echo $recipe['step_d']; ?></li>
-                <?php } ?>
-            </ol>
+      <h4 class="text-left">Directions</h4>
+        <ol>
+          <?php $http = substr($recipe['step_a'], 0, 4); 
+              if ($http != "http" && $http != 'www') { ?>
+                <li><?php echo $recipe['step_a']; ?></li>
+              <?php } else { ?>
+                <li><a href="<?= $recipe['step_a']; ?>" target="_blank"><?= $recipe['step_a']; ?></a></li>
+              <?php } ?>
+          <?php if($recipe['step_b'] != '') { ?>
+                <li><?php echo $recipe['step_b']; ?></li>
+          <?php } ?>
+          <?php if($recipe['step_c'] != '') { ?>
+                <li><?php echo $recipe['step_c']; ?></li>
+          <?php } ?>
+          <?php if($recipe['step_d'] != '') { ?>
+                <li><?php echo $recipe['step_d']; ?></li>
+          <?php } ?>
+        </ol>
 
-        <?php if($recipe['note'] != '') { ?>
-            <h6>Notes&colon;</h6>
-                <p><?php echo $recipe['note']; ?></p>
-        <?php } ?>
+    <?php if($recipe['note'] != '') { ?>
+        <h6>Notes&colon;</h6>
+            <p><?php echo $recipe['note']; ?></p>
+    <?php } ?>
 
-        <p class="text-muted">Servings&colon; <?php echo $recipe['serving']; ?></p>
-        <small class="text-muted">Photo by: <?php echo $img['recipe_caption']?></small>
-    </div>
+    <p class="text-muted">Servings&colon; <?php echo $recipe['serving']; ?></p>
+    <small class="text-muted">Photo by: <?php echo $img['recipe_caption']?></small>
+  </div>
   </div>
   <br>
 <a href="../.?action=list_recipe">Return to recipe list</a>

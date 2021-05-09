@@ -27,13 +27,11 @@
     <br>
 
     <div class="card bg-light">
-      <div class="card-body list header">
-        <div class="row text-center"><br>
-        <h2>Registration is Coming Soon</h2>
-        <h5>Please enjoy the public site</h5>
-        <h5><a href=".">Home</a></h5>
+      <div class="card-body list header"><br>
+        <h2 class="text-center">Registration is Coming Soon</h2><br><br>
+        <h5 class="text-center">Please enjoy the public site</h5><br>
+        <h5 class="text-center"><a href=".">Home</a></h5>
         <br>
-        </div>
       </div>
     </div><br>
 <!-- <div class="row justify-content-md-center">
