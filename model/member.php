@@ -142,4 +142,15 @@ class Member {
         $result = $statement->fetchColumn();
         return $result;
     }
+    public static function updatePW($email, $pw) {
+        $db = Database::getDB();
+        $hash = password_hash($pw, PASSWORD_DEFAULT);
+        $query = 'UPDATE users SET password = :password WHERE email = :email';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':email', $email);
+        $statement->bindValue(':password', $hash);
+        $statement->execute();
+        $statement->closeCursor();
+    }
+
 }

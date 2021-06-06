@@ -43,8 +43,8 @@
         <div class="col-md-10">
             <h4 class="text-center">Not a member? Find out about membership and register <a href=".?action=about-membership">
                 here</a>. </h4>
+            <h5 style="text-align: center;"><a href="./index.php?action=reset_password" >Forgot Password</a></h5>
         </div>
-    </div>
     </main>
 
 <?php include('footer.php')?>
